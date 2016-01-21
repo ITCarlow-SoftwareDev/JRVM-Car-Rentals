@@ -1,58 +1,96 @@
-/*#nav{
-	background: green;
-}*/
+/*!*#nav{*/
+	/*background: green;*/
+/*}*!*/
 
-/*body{
-	width: 1000px;
+/*!*body{*/
+	/*width: 1000px;*/
+/*}*/
+/**!*/
+
+/*!**/
+  /*Content width: 1000px*/
+/**!*/
+/*img{*/
+	/*margin: 0;*/
+	/*padding: 0;*/
+/*}*/
+
+/*#logo{*/
+	/*width: 150px;*/
+/*}*/
+
+/*.wrapper{*/
+	/*width: 1000px;*/
+	/*margin: 0 auto;*/
+/*}*/
+
+/*#nav{*/
+
+	/*height: 50px;*/
+/*}*/
+
+/*#menu li:hover{*/
+	/*border-bottom: 2px solid black;*/
+/*}*/
+
+/*#menu li a{*/
+	/*color: black;*/
+/*}*/
+
+
+
+/*#username{*/
+	/*float: right;*/
+/*}*/
+
+
+/*#login-h1{*/
+	/*color: #00f900;*/
+/*}*/
+
+/*#form{*/
+	/*margin-top: 50px;*/
+/*}*/
+
+
+/*.menu-active{*/
+	/*border-bottom: 2px solid black;*/
+/*}*/
+
+#navbar{
+	height: 80px;
+	margin-bottom: 0;
 }
-*/
 
-/*
-  Content width: 1000px
-*/
-img{
-	margin: 0;
-	padding: 0;
-}
-
-#logo{
-	width: 150px;
-}
-
-.wrapper{
+.content-1000{
 	width: 1000px;
 	margin: 0 auto;
 }
 
-#nav{
-
+#logo{
 	height: 50px;
 }
 
-#menu li:hover{
-	border-bottom: 2px solid black;
+#header-dropdown{
+	margin-top: 15px;
 }
 
-#menu li a{
+#header-menu li{
 	color: black;
+	margin: 0 50px;
 }
 
-
-
-#username{
-	float: right;
+.header-menu-active{
+	border-bottom: 2px solid black;
+	background: white;
+	border-radius: 0px;
 }
 
+#header-menu li:hover{
+	border-bottom: 2px solid black;
+	border-radius: 0px;
+}
 
 #login-h1{
-	color: #00f900;
-}
-
-#form{
-	margin-top: 50px;
-}
-
-
-.menu-active{
-	border-bottom: 2px solid black;
+color: #00f900;
 }
