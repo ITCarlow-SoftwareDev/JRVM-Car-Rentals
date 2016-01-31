@@ -1,63 +1,4 @@
-/*!*#nav{*/
-	/*background: green;*/
-/*}*!*/
-
-/*!*body{*/
-	/*width: 1000px;*/
-/*}*/
-/**!*/
-
-/*!**/
-  /*Content width: 1000px*/
-/**!*/
-/*img{*/
-	/*margin: 0;*/
-	/*padding: 0;*/
-/*}*/
-
-/*#logo{*/
-	/*width: 150px;*/
-/*}*/
-
-/*.wrapper{*/
-	/*width: 1000px;*/
-	/*margin: 0 auto;*/
-/*}*/
-
-/*#nav{*/
-
-	/*height: 50px;*/
-/*}*/
-
-/*#menu li:hover{*/
-	/*border-bottom: 2px solid black;*/
-/*}*/
-
-/*#menu li a{*/
-	/*color: black;*/
-/*}*/
-
-
-
-/*#username{*/
-	/*float: right;*/
-/*}*/
-
-
-/*#login-h1{*/
-	/*color: #00f900;*/
-/*}*/
-
-/*#form{*/
-	/*margin-top: 50px;*/
-/*}*/
-
-
-/*.menu-active{*/
-	/*border-bottom: 2px solid black;*/
-/*}*/
-
-#navbar{
+/*#navbar{
 	height: 80px;
 	margin-bottom: 0;
 }
@@ -93,4 +34,156 @@
 
 #login-h1{
 color: #00f900;
+}
+
+*/
+
+/*--------Menu template--------------*/
+*{
+	margin: 0;
+	padding: 0;
+	/*float: left;*/
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+ul{
+	list-style-type: none;
+}
+body{
+	text-align: center;
+}
+
+li{
+	float: left;
+}
+
+header {
+   position:fixed;
+   left:0px;
+   top:0px;
+   width: 100%;
+   background-color: #fff;
+   padding-top: 10px;
+}
+/*
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}*/
+/*
+.wrapper{
+	margin-top: 10px;
+}*/
+
+.topbar{
+	width: 1000px;
+	margin: 0 auto;
+	/*float: center;*/
+}
+
+#logo {
+	height: 70px;
+	float: left;
+}
+
+
+
+.top_username {
+/*	padding-top: 20px;*/
+	float: right;
+	line-height: 70px;
+}
+
+#dropdown_icon {
+	width: 10px;
+	width: 10px;
+}
+
+.secondbar{
+	width: 100%;
+	height: 50px;
+	line-height: 46px;
+	float: left;
+}
+
+.top_menu {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.top_menu li {
+	padding: 0 60px;
+}
+
+.top_menu li:hover {
+	border-bottom: 4px solid black;
+}
+
+.menu_active {
+	border-bottom: 4px solid black;
+}
+
+.dropdown{
+	display: none;
+	float: left;
+	position: absolute;
+	left: 35px;
+	width: 170px;
+	border: 1px solid black;
+}
+
+.top_menu li:hover .dropdown{
+	display: inherit;
+}
+
+/*content ----- start*/
+.content {
+	float: left;
+	width: 100%;
+	height: 1000px;
+	background-color: #00f900;
+	padding-top: 130px; 
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.form {
+	width: 500px;
+	height: 550px;
+	background-color: #fff;
+	float: left;
+	margin-top: 30px;
+}
+
+.home_car {
+	padding-top: 150px;
+	float: left;
+}
+
+#car {
+	width: 500px;
+}
+
+
+/*footer ------ start*/
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:50px;
+   width:100%;
+   background:#fff;
+   line-height: 50px;
+}
+
+.copyright {
+	font-size: 12px;
+	font-weight: 700;
 }
