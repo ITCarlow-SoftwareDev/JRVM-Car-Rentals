@@ -61,7 +61,30 @@ img{
 .top_username {
 /*	padding-top: 20px;*/
 	float: right;
-	line-height: 70px;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.top_username:hover {
+	background-color: #e8e8e8;
+}
+
+.top_username:hover .dropdown {
+	display: inherit;
+}
+
+#username_dropdown {
+	width: 110px;
+	z-index: 1000;
+	margin-left: -9px;
+	margin-top: 10px;
+	border: 1px solid #c0c0c0;
+}
+
+#username_dropdown li{
+	width: 110px;
+	height: 40px;
+	line-height: 40px;
 }
 
 #dropdown_icon {
@@ -84,8 +107,12 @@ img{
     position: relative;
 }
 
-.secondbar_item {
+/*.secondbar_item {
 	margin: 0 46px;
+}*/
+
+.secondbar_item li {
+	padding: 0 40px;
 }
 
 .top_menu li:hover {
@@ -98,7 +125,7 @@ img{
 
 .dropdown{
     margin-top: 4px;
-	display: none;
+	/*display: none;*/
 	position: absolute;
     /*width: 174px;*/
 	border: 1px solid black;
@@ -142,14 +169,20 @@ img{
     border-bottom: none;
 }
 
+.secondbar_item:hover .dropdown{
+	display: inherit;
+}
+
 .dropdown li:hover {
     background-color: #e8e8e8;
     border-bottom: none;
 }
 
-.top_menu li:hover .dropdown{
+./*top_menu li:hover .dropdown{
 	display: inherit;
-}
+}*/
+
+
 
 .dropdown_second_level{
     margin-top: 4px;
