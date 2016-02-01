@@ -107,8 +107,12 @@ img{
     position: relative;
 }
 
-.secondbar_item {
+/*.secondbar_item {
 	margin: 0 46px;
+}*/
+
+.secondbar_item li {
+	padding: 0 40px;
 }
 
 .top_menu li:hover {
@@ -121,7 +125,7 @@ img{
 
 .dropdown{
     margin-top: 4px;
-	display: none;
+	/*display: none;*/
 	position: absolute;
     /*width: 174px;*/
 	border: 1px solid black;
@@ -165,14 +169,20 @@ img{
     border-bottom: none;
 }
 
+.secondbar_item:hover .dropdown{
+	display: inherit;
+}
+
 .dropdown li:hover {
     background-color: #e8e8e8;
     border-bottom: none;
 }
 
-.top_menu li:hover .dropdown{
+./*top_menu li:hover .dropdown{
 	display: inherit;
-}
+}*/
+
+
 
 .dropdown_second_level{
     margin-top: 4px;
