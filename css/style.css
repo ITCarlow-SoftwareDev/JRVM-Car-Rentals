@@ -121,6 +121,22 @@ img{
 	width: 216px;
 }
 
+#reports {
+	width: 150px;
+}
+
+#reports li {
+	width: 150px;
+}
+
+#blacklist {
+	width: 152px;
+}
+
+#blacklist li {
+	width: 152px;
+}
+
 .dropdown li {
     width: 174px;
     border-bottom: none;
@@ -132,6 +148,34 @@ img{
 }
 
 .top_menu li:hover .dropdown{
+	display: inherit;
+}
+
+.dropdown_second_level{
+    margin-top: 4px;
+	display: none;
+	position: absolute;
+    /*width: 174px;*/
+	border: 1px solid black;
+    background: #fff;
+    margin-left: 216px;
+    /*left: 216px;*/
+    top: -5px;
+}
+
+#company{
+	top: 41px;
+}
+
+#category {
+	top: 87px;
+}
+
+#model {
+	top: 133px;
+}
+
+.dropdown li:hover .dropdown_second_level {
 	display: inherit;
 }
 
