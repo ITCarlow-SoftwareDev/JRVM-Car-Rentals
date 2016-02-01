@@ -78,7 +78,7 @@ header {
 }
 
 .secondbar_item {
-	margin: 0 60px;
+	margin: 0 46px;
 }
 
 .top_menu li:hover {
@@ -99,7 +99,29 @@ header {
 }
 
 .dropdown li {
-    width: 174px;
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background-color: #e8e8e8;
+    border-bottom: none;
+}
+
+#fileMaintenance .dropdown{
+	width: 217px;
+	text-align: center;
+}
+
+#fileMaintenance .dropdown li {
+	width: 217px;
+}
+
+#blacklists .dropdown{
+	width: 160px;
+}
+
+#blacklists .dropdown li {
+	width: 160px;
 }
 
 .top_menu li:hover .dropdown{
