@@ -30,6 +30,10 @@ header {
    padding-top: 10px;
 }
 /*
+img{
+	float: right;
+}*/
+/*
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
@@ -49,8 +53,10 @@ header {
 	height: 70px;
 	float: left;
 }
-
-
+/*
+#icon {
+	background: url("./images/dropdown.png");
+}*/
 
 .top_username {
 /*	padding-top: 20px;*/
@@ -61,6 +67,7 @@ header {
 #dropdown_icon {
 	width: 10px;
 	width: 10px;
+	/*display: inline-block;*/
 }
 
 .secondbar{
@@ -78,7 +85,7 @@ header {
 }
 
 .secondbar_item {
-	margin: 0 60px;
+	margin: 0 46px;
 }
 
 .top_menu li:hover {
@@ -93,13 +100,35 @@ header {
     margin-top: 4px;
 	display: none;
 	position: absolute;
-    width: 174px;
+    /*width: 174px;*/
 	border: 1px solid black;
     background: #fff;
 }
 
+#rental {
+	width: 144px;
+}
+
+#rental li {
+	width: 144px;
+}
+
+#fileMaintenance {
+	width: 216px;
+}
+
+#fileMaintenance li {
+	width: 216px;
+}
+
 .dropdown li {
     width: 174px;
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background-color: #e8e8e8;
+    border-bottom: none;
 }
 
 .top_menu li:hover .dropdown{
