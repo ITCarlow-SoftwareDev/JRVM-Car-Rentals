@@ -134,11 +134,12 @@ img{
 
 #rental {
 	left: 0;
-	width: 150px;
+	width: 147px;
 }
 
 #rental li {
-	width: 150px;
+	width: 147px;
+	padding: 0;
 }
 
 #fileMaintenance {
@@ -147,23 +148,28 @@ img{
 }
 
 #fileMaintenance li {
-	width: 216px;
+	width: 223px;
+	padding: 0;
 }
 
 #reports {
-	width: 150px;
+	left: 673px;
+	width: 155px;
 }
 
 #reports li {
-	width: 150px;
+	width: 155px;
+	padding: 0;
 }
 
 #blacklist {
-	width: 152px;
+	left: 830px;
+	width: 157px;
 }
 
 #blacklist li {
-	width: 152px;
+	width: 157px;
+	padding: 0;
 }
 
 .dropdown li {
@@ -187,7 +193,7 @@ img{
     /*width: 174px;*/
 	border: 1px solid black;
     background: #fff;
-    margin-left: 216px;
+    margin-left: 223px;
     /*left: 216px;*/
     top: -5px;
 }
