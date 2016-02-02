@@ -107,9 +107,13 @@ img{
     position: relative;
 }
 
-.secondbar_item {
-	margin: 0 46px;
+.top_menu li{
+	padding: 0 40px;
 }
+
+/*.secondbar_item {
+	margin: 0 46px;
+}*/
 
 .top_menu li:hover {
 	border-bottom: 4px solid black;
@@ -129,15 +133,17 @@ img{
 }
 
 #rental {
-	width: 144px;
+	left: 0;
+	width: 150px;
 }
 
 #rental li {
-	width: 144px;
+	width: 150px;
 }
 
 #fileMaintenance {
-	width: 216px;
+	left: 287px;
+	width: 223px;
 }
 
 #fileMaintenance li {
