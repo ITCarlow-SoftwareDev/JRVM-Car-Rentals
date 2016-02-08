@@ -17,7 +17,7 @@
 | DeleteFlag           | tinyint(1)  | NO   |     | NULL    |       |
 
 #####Blacklist table
-| Field          | Type         | Null | Key | Default | Extra |
+| Field          | Type         | Null | Key | Default | Comments |
 |----------------|--------------|------|-----|---------|-------|
 | BlacklistID    | int(11)      | NO   | PRI | NULL    |       |
 | EmployeeID     | int(11)      | NO   |     | NULL    |       |
@@ -31,7 +31,7 @@
 
 
 #####Cars table
-| Field             | Type         | Null | Key | Default | Extra |
+| Field             | Type         | Null | Key | Default | Comments |
 |-------------------|--------------|------|-----|---------|-------|
 | RegNo             | varchar(11)  | NO   | PRI | NULL    |       |
 | CategoryID        | varchar(20)  | NO   |     | NULL    |       |
@@ -51,7 +51,7 @@
 
 
 #####Rental table
-| Field            | Type        | Null | Key | Default | Extra |
+| Field            | Type        | Null | Key | Default | Comments |
 |------------------|-------------|------|-----|---------|-------|
 | RentalID         | int(11)     | NO   | PRI | NULL    |       |
 | RegNo            | varchar(12) | NO   |     | NULL    |       |
@@ -65,7 +65,7 @@
 
 
 #####Category table
-| Field           | Type        | Null | Key | Default | Extra |
+| Field           | Type        | Null | Key | Default | Comments |
 |-----------------|-------------|------|-----|---------|-------|
 | CategoryID      | varchar(1)  | NO   | PRI |         |       |
 | RegNo           | varchar(11) | NO   | UNI | NULL    |       |
@@ -75,7 +75,7 @@
 | DeleteFlag      | int(4)      | NO   |     | NULL    |       |
 
 #####Payment table
-| Field         | Type        | Null | Key | Default | Extra |
+| Field         | Type        | Null | Key | Default | Comments |
 |---------------|-------------|------|-----|---------|-------|
 | PaymentID     | int(11)     | NO   | PRI | NULL    |       |
 | RentalID      | int(11)     | NO   |     | NULL    |       |
@@ -90,7 +90,7 @@
 | DeleteFlag    | tinyint(1)  | NO   |     | NULL    |       |
 
 #####Penalty table
-| Field       | Type       | Null | Key | Default | Extra |
+| Field       | Type       | Null | Key | Default | Comments |
 |-------------|------------|------|-----|---------|-------|
 | PenaltyID   | int(11)    | NO   | PRI | NULL    |       |
 | RentalID    | int(11)    | NO   |     | NULL    |       |
@@ -100,7 +100,7 @@
 | DeleteFlag  | tinyint(1) | NO   |     | NULL    |       |
 
 #####Employee table
-| Field      | Type         | Null | Key | Default | Extra |
+| Field      | Type         | Null | Key | Default | Comments |
 |------------|--------------|------|-----|---------|-------|
 | EmployeeID | int(11)      | NO   | PRI | NULL    |       |
 | UserName   | varchar(20)  | NO   | UNI | NULL    |       |
