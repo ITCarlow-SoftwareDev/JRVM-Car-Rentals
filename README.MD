@@ -2,10 +2,10 @@
 ###Database design
 ---
 #####Company table
-| Field                | Type        | Null | Key | Default | Extra |
-|----------------------|-------------|------|-----|---------|-------|
-| CompanyID            | int(11)     | NO   | PRI | NULL    |       |
-| CompanyName          | varchar(35) | NO   |     | NULL    |       |
+| Field                | Type        | Null | Key | Default | Comments |
+|----------------------|-------------|------|-----|---------|----------|
+| CompanyID            | int(11)     | NO   | PRI | NULL    | Primary key |
+| CompanyName          | varchar(35) | NO   |     | NULL    | Stores name of company |
 | Street               | varchar(35) | NO   |     | NULL    |       |
 | Town                 | varchar(20) | NO   |     | NULL    |       |
 | County               | varchar(20) | NO   |     | NULL    |       |
