@@ -107,13 +107,21 @@ img{
     position: relative;
 }
 
+/*<<<<<<< HEAD
+.secondbar_item {
+	margin: 0 46px;
+}
+
+.secondbar_item li {
+=======*/
+.top_menu li{
+/*>>>>>>> 5b283c101d11c645c7a0b49abb27a7da34b78ac0*/
+	padding: 0 40px;
+}
+
 /*.secondbar_item {
 	margin: 0 46px;
 }*/
-
-.secondbar_item li {
-	padding: 0 40px;
-}
 
 .top_menu li:hover {
 	border-bottom: 4px solid black;
@@ -133,35 +141,43 @@ img{
 }
 
 #rental {
-	width: 144px;
+	left: 0;
+	width: 147px;
 }
 
 #rental li {
-	width: 144px;
+	width: 147px;
+	padding: 0;
 }
 
 #fileMaintenance {
-	width: 216px;
+	left: 287px;
+	width: 223px;
 }
 
 #fileMaintenance li {
-	width: 216px;
+	width: 223px;
+	padding: 0;
 }
 
 #reports {
-	width: 150px;
+	left: 673px;
+	width: 155px;
 }
 
 #reports li {
-	width: 150px;
+	width: 155px;
+	padding: 0;
 }
 
 #blacklist {
-	width: 152px;
+	left: 830px;
+	width: 157px;
 }
 
 #blacklist li {
-	width: 152px;
+	width: 157px;
+	padding: 0;
 }
 
 .dropdown li {
@@ -191,7 +207,7 @@ img{
     /*width: 174px;*/
 	border: 1px solid black;
     background: #fff;
-    margin-left: 216px;
+    margin-left: 223px;
     /*left: 216px;*/
     top: -5px;
 }
