@@ -107,15 +107,8 @@ img{
     position: relative;
 }
 
-/*<<<<<<< HEAD
-.secondbar_item {
-	margin: 0 46px;
-}
 
-.secondbar_item li {
-=======*/
 .top_menu li{
-/*>>>>>>> 5b283c101d11c645c7a0b49abb27a7da34b78ac0*/
 	padding: 0 40px;
 }
 
@@ -133,7 +126,7 @@ img{
 
 .dropdown{
     margin-top: 4px;
-	/*display: none;*/
+	display: none;
 	position: absolute;
     /*width: 174px;*/
 	border: 1px solid black;
@@ -185,18 +178,18 @@ img{
     border-bottom: none;
 }
 
-.secondbar_item:hover .dropdown{
+/*.secondbar_item:hover .dropdown{
 	display: inherit;
-}
+}*/
 
 .dropdown li:hover {
     background-color: #e8e8e8;
     border-bottom: none;
 }
 
-./*top_menu li:hover .dropdown{
+.top_menu li:hover .dropdown{
 	display: inherit;
-}*/
+}
 
 
 
