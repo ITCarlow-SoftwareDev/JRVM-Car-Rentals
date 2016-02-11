@@ -2,7 +2,6 @@
 *{
 	margin: 0;
 	padding: 0;
-	/*float: left;*/
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -29,37 +28,18 @@ header {
    background-color: #fff;
    padding-top: 10px;
 }
-/*
-img{
-	float: right;
-}*/
-/*
-.wrapper {
-	width: 1000px;
-	margin: 0 auto;
-}*/
-/*
-.wrapper{
-	margin-top: 10px;
-}*/
 
 .topbar{
 	width: 1000px;
 	margin: 0 auto;
-	/*float: center;*/
 }
 
 #logo {
 	height: 70px;
 	float: left;
 }
-/*
-#icon {
-	background: url("./images/dropdown.png");
-}*/
 
 .top_username {
-/*	padding-top: 20px;*/
 	float: right;
 	padding: 10px;
 	margin-top: 20px;
@@ -90,7 +70,6 @@ img{
 #dropdown_icon {
 	width: 10px;
 	width: 10px;
-	/*display: inline-block;*/
 }
 
 .secondbar{
@@ -112,10 +91,6 @@ img{
 	padding: 0 40px;
 }
 
-/*.secondbar_item {
-	margin: 0 46px;
-}*/
-
 .top_menu li:hover {
 	border-bottom: 4px solid black;
 }
@@ -128,7 +103,6 @@ img{
     margin-top: 4px;
 	display: none;
 	position: absolute;
-    /*width: 174px;*/
 	border: 1px solid black;
     background: #fff;
 }
@@ -178,10 +152,6 @@ img{
     border-bottom: none;
 }
 
-/*.secondbar_item:hover .dropdown{
-	display: inherit;
-}*/
-
 .dropdown li:hover {
     background-color: #e8e8e8;
     border-bottom: none;
@@ -197,11 +167,9 @@ img{
     margin-top: 4px;
 	display: none;
 	position: absolute;
-    /*width: 174px;*/
 	border: 1px solid black;
     background: #fff;
     margin-left: 223px;
-    /*left: 216px;*/
     top: -5px;
 }
 
