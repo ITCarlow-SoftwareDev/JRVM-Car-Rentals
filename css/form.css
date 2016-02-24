@@ -1,3 +1,4 @@
+
 .form {
 	float: left;
 	text-align: left;
@@ -6,12 +7,12 @@
 	border-radius: 15px;
 }
 
-.form input, select {
+.form input, select, textarea{
 	width: 70%;
 	margin-bottom: 20px;
 }
 
-.form input, select, label{
+.form input, select, label, textarea {
 	margin-left: 70px;
 }
 
@@ -19,8 +20,140 @@
 	margin-left: 70px;
 }
 
-.form button {
-    width: 100px;
-    height: 30px;
-    border: none;
+/*-------- Mark Kelly --------------*/
+
+
+
+
+.form button { /*-------- Buttons need to be changed to input type="button" --------------*/
+	width: 80px;
+	font-size: 14px;
+	padding: 1px 5px;
+	margin: 0 5px 0 5px;
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
+
+input[type="button"], input[type="submit"], input[type="reset"], button{
+	width: 100px;
+	font-size: 14px;
+	padding: 1px 5px;
+	margin: 0 5px 0 5px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btnGreen {
+	background-color: white;
+	color: black;
+	border: 2px solid #4CAF50; /* Green */
+}
+
+.btnGreen:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+.btnBlue {
+	background-color: white;
+	color: black;
+	border: 2px solid #008CBA; /* Blue */
+}
+
+.btnBlue:hover {
+	background-color: #008CBA; /* Blue */
+	color: white;
+}
+
+.btnRed {
+	background-color: white;
+	color: black;
+	border: 2px solid #f44336; /* Red */
+}
+
+.btnRed:hover {
+	background-color: #f44336; /* Red */
+	color: white;
+}
+
+.btnBlack {
+	background-color: white;
+	color: black;
+	border: 2px solid #555555; /* Black */
+}
+
+.btnBlack:hover {
+	background-color: #555555; /* Black */
+	color: white;
+}
+
+.returnDate {
+	float: left;
+	width: 10%;
+}
+
+#btnPrint {
+	width: 180px;
+}
+
+#addCat, #delCat {
+	width: 450px;
+	margin: 20px auto 0;
+	padding: 10px 10px 30px 10px;
+	border: 2px solid #ccc;
+}
+
+#rental_form {
+	width: 930px;
+	margin: 20px auto 0;
+	border: 2px solid #ccc;
+}
+
+#rental_form button {
+	float: right;
+}
+
+#rental_submit_btn {
+	margin-right: 100px;
+}
+
+#formLeft {
+	float: left;
+	width: 40%;
+}
+
+#formRight {
+	float: left;
+	width: 59%;
+	height: 342px;
+}
+
+#available_cars {
+	width: 400px;
+	height: 280px;
+	margin-left: 70px;
+	border: 1px solid #999;
+}
+
+.showMessage {
+	height: 50px;
+	margin-left: 70px;
+}
+
+textarea {
+	width: 66%;
+	height: 125px;
+	padding: 10px;
+	resize: none;
+}
+
+h2 {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+/*-------- End Mark Kelly --------------*/

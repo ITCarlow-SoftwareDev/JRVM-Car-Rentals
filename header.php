@@ -5,8 +5,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/form.css">
+	<script src="javascript/rental.js"></script>
 </head>
 <body>
+	<?php session_start(); ?>
 	<div class="wrapper">
 	    <header>
 	    	<div class="topbar">
@@ -15,7 +17,7 @@
 		    	</div>
 		    	<!-- username -->
 		    	<div class="top_username">
-		    		<span><a href="#">Username&nbsp;<img id="dropdown_icon" src="./images/dropdown.png"></a></span>
+		    		<span><a href="#"><?php echo $_SESSION['username']; ?>&nbsp;<img id="dropdown_icon" src="./images/dropdown.png"></a></span>
 					    <ul class="dropdown" id="username_dropdown">
 					        	<a href="#"><li>Profile</li></a>
 					        	<a href="#"><li>Set up</li></a>
