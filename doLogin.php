@@ -12,7 +12,7 @@
     $password = $_POST['password'];
 
     $conn = getConnection();
-    $sql = "SELECT count(EmployeeID) AS 'count' FROM Employee WHERE UserName = '" . $username . "' AND Password = '" . $password ."';";
+    $sql = "SELECT count(EmployeeID) AS 'count' FROM Employee WHERE UserName = '" . $username . "' AND Password = '" . md5($password) ."';";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
     echo $row['count'];

@@ -7,6 +7,12 @@
 	<link href="./css/form.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<?php
+		session_start();
+		if (isset($_SESSION['username'])) {
+			header("location: rental.php");
+		}
+	?>
 	<div class="wrapper">
 	    <header>
 	    	<div class="topbar">

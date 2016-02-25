@@ -1,42 +1,33 @@
 <?php
-	include 'header.php';
+include 'header.php';
 ?>
 
-<!-- Todo your works -->
+	<form id="rental_form" class="form">
+		<div id="formLeft">
+			<label for="company">Company Name</label>
+			<select id="company" name="company" autofocus>
+				<option value="">Select a Company:</option>
 
-	<!-- form -->
-	<div class="form">
-		<form>
-			<label>Demo</label><br>
-			<input type="text"><br>
-			<label>Demo</label><br>
-			<input type="text"><br>
-			<label>Demo</label><br>
-			<input type="text"><br>
-			<label>Demo</label><br>
-			<input type="text"><br>
-			<label>Demo</label><br>
-			<input type="text"><br>
-			<label>Demo</label><br>
-			<input type="text"><br>
-			<label>Demo</label><br>
-			<select>
-			  <option value="volvo">Volvo</option>
-			  <option value="saab">Saab</option>
-			  <option value="opel">Opel</option>
-			  <option value="audi">Audi</option>
-			</select><br>
-			<div class="rental-form-btn">
-				<button type="reset">Clear</button>
-				<button type="submit">Submit</button>
+			</select>
+			<label>Company Details</label>
+			<textarea id="textarea" readonly></textarea>
+			<label for="returnDate">Return Date of Vehicle</label><br>
+			<input name="returnDate" class="returnDate" type="date"><br>
+			<label>Rental Cost</label><br>
+			<input class="returnDate" type="text" disabled><br>
+		</div>
+		<div id="formRight">
+			<label>Available Cars</label>
+			<div id="available_cars">
 			</div>
-		</form>
-	</div>
-	<!-- image -->
-	<div class="home_car">
-	  <img id="car" src="./images/car.png">
-	</div>
+		</div>
+		<div class="rental-form-btn">
+			<button class="btnGreen" id="rental_submit_btn" type="submit">Submit</button>
+			<button class="btnBlue" id="btnPrint" >Print Rental Agreement</button>
+			<button class="btnRed" type="reset" onclick="clearForm()">Clear</button>
+		</div>
+	</form>
 
-<?php 
-	include 'footer.php';
+<?php
+include 'footer.php';
 ?>

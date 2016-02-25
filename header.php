@@ -8,7 +8,12 @@
 	<script src="javascript/rental.js"></script>
 </head>
 <body>
-	<?php session_start(); ?>
+	<?php
+		session_start();
+		if (!isset($_SESSION['username'])) {
+			header("location: index.php");
+		}
+	?>
 	<div class="wrapper">
 	    <header>
 	    	<div class="topbar">
