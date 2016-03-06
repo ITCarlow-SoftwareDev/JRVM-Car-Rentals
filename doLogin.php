@@ -21,5 +21,16 @@
         $_SESSION['username'] = $username;
         header("location: rental.php");
     } else {
-        header("location: index.php?error_message=1");
+        $usernameSQL = "SELECT count(EmployeeID) AS 'count' FROM Employee WHERE  Username = '" . $username .  "';";
+        $result = mysqli_query($conn, $usernameSQL);
+        $row = mysqli_fetch_array($result);
+
+        if($row['count'] == 1) {
+            // Password is not correct.
+            header("location: index.php?error_message=2");
+        } else {
+            // Username doesn't exist.
+            header("location: index.php?error_message=1");
+        }
+
     }

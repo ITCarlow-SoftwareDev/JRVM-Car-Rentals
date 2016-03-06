@@ -21,17 +21,17 @@ li{
 }
 
 header {
-   position:fixed;
-   left:0px;
-   top:0px;
-   width: 100%;
-   background-color: #fff;
-   padding-top: 10px;
+  position:fixed;
+  left:0px;
+  top:0px;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 10px;
 }
 
 .topbar{
 	width: 1000px;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 #logo {
@@ -54,7 +54,7 @@ header {
 }
 
 #username_dropdown {
-	width: 110px;
+	width: 160px;
 	z-index: 1000;
 	margin-left: -9px;
 	margin-top: 10px;
@@ -62,7 +62,7 @@ header {
 }
 
 #username_dropdown li{
-	width: 110px;
+	width: 160px;
 	height: 40px;
 	line-height: 40px;
 }
@@ -83,7 +83,7 @@ header {
 	width: 1000px;
 	margin: 0 auto;
 	display: inline-block;
-    position: relative;
+  position: relative;
 }
 
 
@@ -100,11 +100,11 @@ header {
 }
 
 .dropdown{
-    margin-top: 4px;
+  margin-top: 4px;
 	display: none;
 	position: absolute;
 	border: 1px solid black;
-    background: #fff;
+  background: #fff;
 }
 
 #rental {
@@ -193,9 +193,9 @@ header {
 .content {
 	float: left;
 	width: 100%;
-	height: 900px;
+	height: 1000px;
 	background-color: #00f900;
-	padding-top: 130px; 
+	padding-top: 130px;
 }
 
 .container {
@@ -205,14 +205,13 @@ header {
 
 .form {
 	width: 500px;
-	height: 550px;
 	background-color: #fff;
 	float: left;
 	margin-top: 30px;
 }
 
 .home_car {
-	padding-top: 150px;
+	padding: 150px 0 0 15px;
 	float: left;
 }
 
@@ -223,13 +222,14 @@ header {
 
 /*footer ------ start*/
 footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:50px;
-   width:100%;
-   background:#fff;
-   line-height: 50px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
+  background:#fff;
+  line-height: 50px;
+  /*border-top: 2px solid #ccc;*/
 }
 
 .copyright {

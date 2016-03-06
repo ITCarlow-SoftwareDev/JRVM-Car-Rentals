@@ -1,0 +1,30 @@
+#index-login {
+    width: 350px;
+    margin-left: 70px;
+    height: 40px;
+    font-size: 16px;
+    /*margin-top: 20px;*/
+}
+
+.index-input {
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+#index-form {
+    padding-top: 30px;
+    height: 210px;
+    margin: 150px 0 0 230px;
+}
+
+#index-h1 {
+    margin-top: 50px;
+    font-size: 36px;
+}
+
+#index-error-msg{
+    color: red;
+    /*margin-left: 70px;*/
+    text-align: center;
+}
