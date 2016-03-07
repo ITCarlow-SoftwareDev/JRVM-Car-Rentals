@@ -8,7 +8,13 @@
 	<script src="javascript/rental.js"></script>
 </head>
 <body>
-	<?php session_start(); ?>
+	<?php
+		include 'func.inc.php';
+		session_start();
+		if (!isset($_SESSION['username'])) {
+			header("location: index.php");
+		}
+	?>
 	<div class="wrapper">
 	    <header>
 	    	<div class="topbar">
@@ -21,7 +27,7 @@
 					    <ul class="dropdown" id="username_dropdown">
 					        	<a href="#"><li>Profile</li></a>
 					        	<a href="#"><li>Set up</li></a>
-					        	<a href="#"><li>Log out</li></a>
+					        	<a href="doLogout.php"><li>Log out</li></a>
 					    </ul>
 		    	</div>
 	    	</div>

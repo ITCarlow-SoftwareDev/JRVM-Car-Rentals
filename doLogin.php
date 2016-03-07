@@ -12,7 +12,7 @@
     $password = $_POST['password'];
 
     $conn = getConnection();
-    $sql = "SELECT count(EmployeeID) AS 'count' FROM Employee WHERE UserName = '" . $username . "' AND Password = '" . $password ."';";
+    $sql = "SELECT count(EmployeeID) AS 'count' FROM Employee WHERE UserName = '" . $username . "' AND Password = '" . md5($password) ."';";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
     echo $row['count'];
@@ -21,5 +21,5 @@
         $_SESSION['username'] = $username;
         header("location: rental.php");
     } else {
-        header("location: index.php?error_message=1");
+        header("location: index.php?error_message=1" . md5($password));
     }
