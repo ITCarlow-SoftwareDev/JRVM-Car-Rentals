@@ -40,7 +40,7 @@ if (!isset($_SESSION['username'])) {
 					</ul>
 				</li>
 				<li><a href="return.php" class="secondbar_item">Returns</a></li>
-				<li><a href="#" class="secondbar_item">File Maintenance</a>
+				<li><a href="#" class="secondbar_item">Maintenance</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="fileMaintenance" class="dropdown">
 						<li><a href="#">Add</a>
@@ -68,7 +68,7 @@ if (!isset($_SESSION['username'])) {
 						</li>
 					</ul>
 				</li>
-				<li><a href="#" class="secondbar_item">Customers</a></li>
+				<li><a href="#" class="secondbar_item">Payments</a></li>
 				<li><a href="#" class="secondbar_item">Reports</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="reports" class="dropdown">

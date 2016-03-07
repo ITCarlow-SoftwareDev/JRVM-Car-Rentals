@@ -21,12 +21,12 @@ li{
 }
 
 header {
-  position:fixed;
-  left:0px;
-  top:0px;
-  width: 100%;
-  background-color: #fff;
-  padding-top: 10px;
+	position:fixed;
+	left:0px;
+	top:0px;
+	width: 100%;
+	background-color: #fff;
+	padding-top: 10px;
 }
 
 .topbar{
@@ -83,12 +83,12 @@ header {
 	width: 1000px;
 	margin: 0 auto;
 	display: inline-block;
-  position: relative;
+	position: relative;
 }
 
 
 .top_menu li{
-	padding: 0 40px;
+	padding: 0 44px;
 }
 
 .top_menu li:hover {
@@ -100,61 +100,61 @@ header {
 }
 
 .dropdown{
-  margin-top: 4px;
+	margin-top: 4px;
 	display: none;
 	position: absolute;
 	border: 1px solid black;
-  background: #fff;
+	background: #fff;
 }
 
 #rental {
 	left: 0;
-	width: 147px;
+	width: 155px;
 }
 
 #rental li {
-	width: 147px;
+	width: 155px;
 	padding: 0;
 }
 
 #fileMaintenance {
-	left: 287px;
-	width: 223px;
+	left: 303px;
+	width: 201px;
 }
 
 #fileMaintenance li {
-	width: 223px;
+	width: 201px;
 	padding: 0;
 }
 
 #reports {
-	left: 673px;
-	width: 155px;
+	left: 668px;
+	width: 162px;
 }
 
 #reports li {
-	width: 155px;
+	width: 162px;
 	padding: 0;
 }
 
 #blacklist {
-	left: 830px;
-	width: 157px;
+	left: 832px;
+	width: 165px;
 }
 
 #blacklist li {
-	width: 157px;
+	width: 165px;
 	padding: 0;
 }
 
 .dropdown li {
-    width: 174px;
-    border-bottom: none;
+	width: 174px;
+	border-bottom: none;
 }
 
 .dropdown li:hover {
-    background-color: #e8e8e8;
-    border-bottom: none;
+	background-color: #e8e8e8;
+	border-bottom: none;
 }
 
 .top_menu li:hover .dropdown{
@@ -164,13 +164,13 @@ header {
 
 
 .dropdown_second_level{
-    margin-top: 4px;
+	margin-top: 4px;
 	display: none;
 	position: absolute;
 	border: 1px solid black;
-    background: #fff;
-    margin-left: 223px;
-    top: -5px;
+	background: #fff;
+	margin-left: 201px;
+	top: -5px;
 }
 
 #company{
@@ -219,17 +219,32 @@ header {
 	width: 480px;
 }
 
+/*for change password page*/
+#changePassword-form {
+	margin: 150px 0 0 230px;
+}
+
+#changePassword-form form h1 {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+
+.btn-group {
+	float: right;
+	margin-right: 75px;
+}
 
 /*footer ------ start*/
 footer {
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  height:50px;
-  width:100%;
-  background:#fff;
-  line-height: 50px;
-  /*border-top: 2px solid #ccc;*/
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:50px;
+	width:100%;
+	background:#fff;
+	line-height: 50px;
+	/*border-top: 2px solid #ccc;*/
 }
 
 .copyright {
