@@ -40,6 +40,7 @@ if(isset($_SESSION['username'])) {
 									break;
 								case '2': echo "Password is incorrect.";
 									break;
+								case '3': echo "You haven't logged in.";
 							}
 						} else {
 							echo "&nbsp;";

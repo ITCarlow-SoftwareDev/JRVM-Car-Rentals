@@ -12,7 +12,7 @@
 	<?php
 		session_start();
 		if (!isset($_SESSION['username'])) {
-			header("location: index.php");
+			header("location: index.php?error_message=3");
 		}
 	?>
 	<div class="wrapper">
