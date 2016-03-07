@@ -1,8 +1,91 @@
+<!-- 
+  Author: Mark Kelly
+  Date: 22/02/2016
+  File Name: amendCategory.php
+  Purpose: To allow user to view and amend rental categories
+-->
 <?php
 	include 'header.php';
 ?>
-<!-- Todo your works -->
-
+<form name="amendCat" id="amendCat" class="form" onsubmit="return confirmCheck()" action="doAmendCategory.php" method="post">
+  <h2>View/Amend a Rental Category</h2>
+  <label id="viewAmend">Select Category to View</label>
+  <select name="listAmendCat" id="listAmendCat" onchange='populate()' title="Please select a category id from the list" required autofocus>
+    <option value=""></option>
+    <?php 
+      include 'listCategory.php'; // display the category id's in the select box
+    ?>
+  </select>
+  <!-- hidden input box to store the category id -->
+  <input type="text" name="amendCatId" id="amendCatId" style="display: none;">
+  <label for="amendCostPerDay">Cost per Day</label>
+  <input type="number" name="amendCostPerDay" id="amendCostPerDay"
+  title="Please enter cost per day for vehicle" min="0" step=".01" required disabled>
+  <label for="amendFiveDayDisc">Five day Discount (%)</label>
+  <input type="number" id="amendFiveDayDisc" name="amendFiveDayDisc"
+  title="Please enter the five day discount as a percentage" min="0" max="100" step="1" required disabled>
+  <label for="amendTenDayDisc">Ten day Discount (%)</label>
+  <input type="number" name="amendTenDayDisc" id="amendTenDayDisc"
+  title="Please enter the ten day discount as a percentage" min="0" max="100" step="1" required disabled>
+  <div class="rental-form-btn">
+    <input type="reset" class="btnRed" id="cancelBtn" value="Clear">
+    <input type="button" class="btnBlue" id="amendBtn" value="Amend" onclick = "toggleLock()">
+    <input type="submit" class="btnGreen" id="btnSaveChanges" value="Save Changes" style="display: none">
+  </div>
+</form>
+<!-- image -->
+<div class="home_car">
+  <img id="car" src="./images/car.png">
+</div>
+<script>
+  // populate() displays the details for the selected category
+  function populate(){
+    var sel = document.getElementById("listAmendCat");
+    var result = sel.options[sel.selectedIndex].value;
+    var categoryDetails = result.split(',');
+    document.getElementById("amendCatId").value = categoryDetails[0];
+    document.getElementById("amendCostPerDay").value = categoryDetails[1];
+    document.getElementById("amendFiveDayDisc").value = categoryDetails[2];
+    document.getElementById("amendTenDayDisc").value = categoryDetails[3];
+    document.getElementById("amendBtn").disabled = false;
+  } // end populate
+  // toggleLock() toggles the buttons and input fields,
+  // depending on the value of the amend button
+  function toggleLock() {
+    if(document.getElementById("amendBtn").value == "Amend") {
+      document.getElementById("amendCostPerDay").disabled = false;
+      document.getElementById("amendFiveDayDisc").disabled = false;
+      document.getElementById("amendTenDayDisc").disabled = false;
+      document.getElementById("amendBtn").value = "View";
+      // change the label to "Select category to amend"
+      document.getElementById("viewAmend").innerHTML = "Select category to amend";
+      // show the "Save Changes" button
+      document.getElementById("btnSaveChanges").style.display = "inline";
+    }
+    else {
+      document.getElementById("amendCostPerDay").disabled = true;
+      document.getElementById("amendFiveDayDisc").disabled = true;
+      document.getElementById("amendTenDayDisc").disabled = true;
+      document.getElementById("amendBtn").value = "Amend";
+      // change the label to "Select category to view"
+      document.getElementById("viewAmend").innerHTML = "Select category to view";
+      // hide the "Save Changes" button
+      document.getElementById("btnSaveChanges").style.display = "none";
+    }
+  } // end toggleLock
+  // confirmCheck() prompts user to confirm details before submiting
+  function confirmCheck() {
+    var response = confirm("Are you sure you want to save these changes");
+    if(response == true) {
+      return true;
+    }
+    else {
+      populate();
+      toggleLock();
+      return false;
+    }
+  } // end confirmCheck
+</script>
 <?php 
 	include 'footer.php';
 ?>
