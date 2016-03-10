@@ -15,7 +15,7 @@
   $sql="INSERT INTO Category (CategoryID, CostPerDay, FiveDayDiscount, TenDayDiscount)
   VALUES ('" . $catId . "', '" . $costPerDay . "', '" . $fiveDayDisc . "', '" . $tenDayDisc . "');";
   if(!mysqli_query($con, $sql)) {
-    die("An Error in the SQL Query: " . mysqli_error($con));
+    die("An Error in the SQL Add Category Query: " . mysqli_error($con));
   }
   mysqli_close($con);
 	include 'header.php';

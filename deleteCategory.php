@@ -9,9 +9,9 @@
 ?>
 <form name="delCat" id="delCat" class="form" onsubmit="return confirmCheck()" action="doDeleteCategory.php" method="post">
   <h2>Delete a Rental Category</h2>
-  <label for="listDeleteCat">Select Category to Delete</label>
+  <label for="listDeleteCat">Categories</label>
   <select name="listDeleteCat" id="listDeleteCat" onchange='populate()' title="List of category id's" required autofocus>
-  <option value=""></option>
+  <option value="">Select a category to delete</option>
     <?php 
       include 'listCategory.php'; // display the category id's in the select box
     ?>
@@ -25,7 +25,7 @@
   <label for="delTenDayDisc">Ten Day Discount (%)</label>
   <input type="number" name="delTenDayDisc" id="delTenDayDisc" readonly>
   <div class="rental-form-btn">
-    <button class="btnRed" type="reset">Clear</button>
+    <button class="btnRed" type="reset">Cancel</button>
     <button class="btnGreen" type="submit">Delete</button>
   </div>
 </form>

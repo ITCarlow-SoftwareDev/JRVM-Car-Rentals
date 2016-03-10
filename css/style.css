@@ -216,7 +216,8 @@ header {
 }
 
 #car {
-	width: 480px;
+	width: 460px;
+  float: left;
 }
 
 /*for change password page*/
@@ -227,12 +228,17 @@ header {
 #changePassword-form form h1 {
 	text-align: center;
 	font-size: 36px;
-	margin-bottom: 30px;
 }
 
 .btn-group {
 	float: right;
 	margin-right: 75px;
+}
+
+#error-msg{
+	color: red;
+	/*margin-left: 70px;*/
+	text-align: center;
 }
 
 /*footer ------ start*/

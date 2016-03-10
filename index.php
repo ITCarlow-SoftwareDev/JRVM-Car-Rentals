@@ -32,7 +32,7 @@ if(isset($_SESSION['username'])) {
 					<input type="text" name="username" class="index-input"><br>
 					<label>Password</label><br>
 					<input type="password" name="password" class="index-input">
-					<p id="index-error-msg">
+					<p id="error-msg">
 						<?php
 						if(isset($_GET['error_message'])) {
 							switch($_GET['error_message']) {
@@ -55,5 +55,5 @@ if(isset($_SESSION['username'])) {
 
 
 <?php
-include 'footer.php';
+	include 'footer.php';
 ?>

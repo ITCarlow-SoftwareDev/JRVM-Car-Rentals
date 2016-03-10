@@ -1,13 +1,13 @@
-/*-------- Vaidas Siupienius --------------*/
+/*Page Title: vaidasCss.css
+ Author: Vaidas Siupienius  
+Date :02/16
+Purpose:Style sheet for my screens  */
 div.table {
-
   border: 2px solid black;
-/*--------scroll bar in the table only on right side no bar in the bottom --------------*/
-overflow-y: scroll;
-height: 250px;
-margin:15px;
-
-
+	/*--------scroll bar in the table only on right side no bar in the bottom --------------*/
+	overflow-y: scroll;
+	height: 250px;
+	margin:15px;
 
 }
 
@@ -16,9 +16,21 @@ table,tr,td,th {
 /*-------- setting borders on every row-column-------------*/
     border-collapse: collapse;
     border: 1px solid black;
-padding: 7px;
+	padding: 7px;
 
+}
+#blacklistForm{
+	width:900px;
+	margin: 30px 15px;
+
+}
+#buttonCenter{
+	
+margin:  auto; 
+
+ text-align: center
+	
 }
 
 
-/*-------- End Vaidas Siupienius --------------*/
+

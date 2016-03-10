@@ -9,9 +9,9 @@
 ?>
 <form name="amendCat" id="amendCat" class="form" onsubmit="return confirmCheck()" action="doAmendCategory.php" method="post">
   <h2>View/Amend a Rental Category</h2>
-  <label id="viewAmend">Select Category to View</label>
+  <label id="viewAmend">Categories</label>
   <select name="listAmendCat" id="listAmendCat" onchange='populate()' title="Please select a category id from the list" required autofocus>
-    <option value=""></option>
+    <option value="">Select a category</option>
     <?php 
       include 'listCategory.php'; // display the category id's in the select box
     ?>
@@ -28,7 +28,7 @@
   <input type="number" name="amendTenDayDisc" id="amendTenDayDisc"
   title="Please enter the ten day discount as a percentage" min="0" max="100" step="1" required disabled>
   <div class="rental-form-btn">
-    <input type="reset" class="btnRed" id="cancelBtn" value="Clear">
+    <input type="reset" class="btnRed" id="cancelBtn" value="Cancel">
     <input type="button" class="btnBlue" id="amendBtn" value="Amend" onclick = "toggleLock()">
     <input type="submit" class="btnGreen" id="btnSaveChanges" value="Save Changes" style="display: none">
   </div>
@@ -57,8 +57,6 @@
       document.getElementById("amendFiveDayDisc").disabled = false;
       document.getElementById("amendTenDayDisc").disabled = false;
       document.getElementById("amendBtn").value = "View";
-      // change the label to "Select category to amend"
-      document.getElementById("viewAmend").innerHTML = "Select category to amend";
       // show the "Save Changes" button
       document.getElementById("btnSaveChanges").style.display = "inline";
     }
@@ -67,8 +65,6 @@
       document.getElementById("amendFiveDayDisc").disabled = true;
       document.getElementById("amendTenDayDisc").disabled = true;
       document.getElementById("amendBtn").value = "Amend";
-      // change the label to "Select category to view"
-      document.getElementById("viewAmend").innerHTML = "Select category to view";
       // hide the "Save Changes" button
       document.getElementById("btnSaveChanges").style.display = "none";
     }

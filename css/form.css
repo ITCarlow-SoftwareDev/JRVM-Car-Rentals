@@ -8,9 +8,9 @@
   border: 2px solid #ccc; /* Dark Grey */
 }
 
-.form input, select {
+.form input, select, textarea {
 	width: 70%;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
   padding: 3px 5px 3px 5px;
   box-sizing: border-box;
 }
@@ -42,14 +42,6 @@ input[type="button"], input[type="submit"], input[type="reset"] {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-
-/*
-input:required {
-  background-image: url("/images/asterisk.png");
-  background-position: 5px 5px; 
-  background-repeat: no-repeat;
-}
-*/
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -117,11 +109,7 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 }
 
 #rental_form {
-  width: 950px;
-}
-
-#rentalReport {
-  width: 950px;
+  width: 970px;
 }
 
 #rental_form button {
@@ -150,46 +138,110 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
   border: 1px solid #999;
 }
 
-textarea {
-  width: 66%;
-  height: 125px;
-  padding: 10px;
-  resize: none;
-}
-
 h2 {
   text-align: center;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 20px 0;
 }
 
 /*-------- Report Tables --------------*/
 
-.reportTable {
-  margin-left:auto; 
-  margin-right:auto;
-  width: 95%;
+#rentalReport {
+  width: 950px;
+  padding: 20px;
 }
 
-.reportTable th {
-  height: 40px;
-  background-color: #008CBA;
+#rentalReport textarea {
+  width: 70%;
+  height: 93px;
+  padding: 10px0 0 8px;
+  color: black;
+  resize: none;
+}
+
+.tableHead {
+  height: 60px;
+  width: 950px;
+  text-align: center;
+  background-color: #008CBA; /* Blue */
   color: white;
 }
 
-.reportTable td, th {
-  text-align: center;
-  padding: 8px;
+.tableScroll {
+  height: 177px;
+  overflow-y: scroll;
+  border: 2px solid #008CBA; /* Blue */
 }
 
-.reportTable tr:nth-child(even){background-color: #f2f2f2}
+.reportTable {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-left-style:none;
+}
 
-.btnReport {
+.tdAlignLeft{
+  width: 330px;
+  text-align: left;
+}
+
+/* even rows are Grey */
+.reportTable tr:nth-child(even){background-color: #e6e6e6;}
+
+.btnClientInfo {
   float: right;
 }
 
-#tdAlignLeft{
-  text-align: left;
+/* Rental report table head */
+#companyName {
+  border: 2px solid #008CBA; /* Blue */
+  width: 330px;
 }
+
+#dateOfRental {
+  border: 2px solid #008CBA; /* Blue */
+  width: 180px;
+}
+
+#durationOfRental {
+  border: 2px solid #008CBA; /* Blue */
+  width: 180px;
+}
+
+#costOfRental {
+  border: 2px solid #008CBA; /* Blue */
+  width: 196px;
+}
+
+#btnRentalReport {
+  margin: 0 0 0 0;
+}
+
+/* Rental report fieldsets */
+.reportFieldset {
+  height: 320px;
+  width: 460px;
+  padding: 10px 30px 0 10px;
+  margin: 20px 0 20px 0;
+  float: left;
+  box-sizing: border-box;
+  border: 2px solid #008CBA; /* Blue */
+}
+
+/* Account Info Fieldset */
+#accountInfo {
+  float: right;
+}
+
+legend { 
+  font-weight: bold;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/*----------------------*/
+
+
 
 /*-------- End Mark Kelly --------------*/
 

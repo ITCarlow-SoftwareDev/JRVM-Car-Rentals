@@ -32,4 +32,5 @@
             // Username doesn't exist.
             header("location: index.php?error_message=1");
         }
+
     }

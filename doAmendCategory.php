@@ -15,7 +15,7 @@
   $sql = "UPDATE Category SET CostPerDay = $costPerDay, FiveDayDiscount = $fiveDayDisc,
   TenDayDiscount = $tenDayDisc WHERE CategoryID = '$catId' ";
   if(!mysqli_query($con, $sql)) {
-    die("An Error in the SQL Query: " . mysqli_error($con));
+    die("An Error in the SQL Amend Category Query: " . mysqli_error($con));
   }
   mysqli_close($con);
 	include 'header.php';
