@@ -30,7 +30,7 @@
   <input type="number" value="<?php echo $fiveDayDisc ?>" readonly>
   <label>Ten Day Discount (%)</label>
   <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
-  <div class="rental-form-btn">
+  <div class="form-btn">
     <input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
   </div>
 </form>

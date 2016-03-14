@@ -68,7 +68,7 @@ if (!isset($_SESSION['username'])) {
 						</li>
 					</ul>
 				</li>
-				<li><a href="#" class="secondbar_item">Payments</a></li>
+				<li><a href="acceptPayment.php" class="secondbar_item">Payments</a></li>
 				<li><a href="#" class="secondbar_item">Reports</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="reports" class="dropdown">

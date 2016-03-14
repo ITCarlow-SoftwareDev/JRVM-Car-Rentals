@@ -65,7 +65,7 @@ include 'header.php';
 	  <label>Fuel Type </label> <br>
 	  <input type="text" value="<?php echo $theFuelType ?>" readonly>
 	  
-	  <div class="rental-form-btn">
+	  <div class="form-btn">
 		<input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
 	  </div>
 </form>

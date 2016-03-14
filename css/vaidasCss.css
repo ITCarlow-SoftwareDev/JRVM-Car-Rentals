@@ -31,6 +31,12 @@ margin:  auto;
  text-align: center
 	
 }
+#confirmationMessage{
+	text-align:center;
+	color:red;
+	font:15px;
+	
+}
 
 
 

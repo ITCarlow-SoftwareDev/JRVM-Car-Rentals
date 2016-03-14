@@ -27,7 +27,7 @@
   <label for="addTenDayDisc">New Ten Day Discount (%)</label>
   <input type="number" name="addTenDayDisc" id="addTenDayDisc" title="Please enter the ten day discount as a percentage"
   placeholder="Whole number between 0 and 100 e.g. 25" min="0" max="100" step="1" required>
-  <div class="rental-form-btn">
+  <div class="form-btn">
     <button class="btnRed" type="reset">Cancel</button>
     <button class="btnGreen" type="submit">Save</button>
   </div>

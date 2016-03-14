@@ -24,7 +24,7 @@
   <input type="number" name="delFiveDayDisc" id="delFiveDayDisc" readonly>
   <label for="delTenDayDisc">Ten Day Discount (%)</label>
   <input type="number" name="delTenDayDisc" id="delTenDayDisc" readonly>
-  <div class="rental-form-btn">
+  <div class="form-btn">
     <button class="btnRed" type="reset">Cancel</button>
     <button class="btnGreen" type="submit">Delete</button>
   </div>

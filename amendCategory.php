@@ -27,7 +27,7 @@
   <label for="amendTenDayDisc">Ten day Discount (%)</label>
   <input type="number" name="amendTenDayDisc" id="amendTenDayDisc"
   title="Please enter the ten day discount as a percentage" min="0" max="100" step="1" required disabled>
-  <div class="rental-form-btn">
+  <div class="form-btn">
     <input type="reset" class="btnRed" id="cancelBtn" value="Cancel">
     <input type="button" class="btnBlue" id="amendBtn" value="Amend" onclick = "toggleLock()">
     <input type="submit" class="btnGreen" id="btnSaveChanges" value="Save Changes" style="display: none">
