@@ -2,7 +2,10 @@
 	include 'header.php';
 ?>
 <!-- Todo your works -->
+<section class="margin-top-100px">
 	<div class="form">
+		<h1><center>Add a Company</center></h1>
+		<p>&nbsp;</p>
 		<form action="doAddCompany.php" method="post">
 			<label>Company Name</label><br>
 			<input type="text" name="companyName"><br>
@@ -17,10 +20,16 @@
 			<label>Credit Limit</label><br>
 			<input type="number" name="creditLimite"><br>
 			<br>
-			<button class="btnGreen">Submit</button>
-			<button class="btnRed">Cancel</button>
+			<div class="btn-group">
+				<button class="btnRed">Clear</button>
+				<button class="btnGreen">Submit</button>
+			</div>
 		</form>
 	</div>
+	<div class="home_car">
+		<img id="car" src="./images/car.png">
+	</div>
+</section>
 <?php 
 	include 'footer.php';
 ?>

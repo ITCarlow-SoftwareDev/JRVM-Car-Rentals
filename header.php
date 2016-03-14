@@ -34,11 +34,7 @@ if (!isset($_SESSION['username'])) {
 		<!-- menu -->
 		<nav class="secondbar">
 			<ul class="top_menu">
-				<li class="menu_active"><a href="rental.php" class="secondbar_item">Rentals</a>&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
-					<ul id="rental" class="dropdown">
-						<li><a href="#">Amend / View</a></li>
-					</ul>
-				</li>
+				<li class="menu_active"><a href="rental.php" class="secondbar_item">Rentals</a></li>
 				<li><a href="return.php" class="secondbar_item">Returns</a></li>
 				<li><a href="#" class="secondbar_item">Maintenance</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
