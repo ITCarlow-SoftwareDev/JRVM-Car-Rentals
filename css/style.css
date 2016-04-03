@@ -249,6 +249,10 @@ header {
 	text-align: center;
 }
 
+.hidden {
+    display: hidden;
+}
+
 /*footer ------ start*/
 footer {
 	position:fixed;

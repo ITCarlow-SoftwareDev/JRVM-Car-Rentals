@@ -1,14 +1,21 @@
 <?php
-include 'header.php';
-require_once 'functions.php';
+    /*
+     * Student Name: MINGJIE SHAO
+     * Student ID: C00188468
+     * Date: 30-03-2016
+     * Todo:
+     * Bug:
+     */
+    include 'header.php';
+    require_once 'functions.php';
 ?>
 	<section class="margin-top-100px">
 		<div class="form">
 			<h1><center>Delete a Company</center></h1>
 			<p>&nbsp;</p>
-			<form action="doAddCompany.php" method="post">
+			<form action="doDeleteCompany.php" method="post">
 				<label>Company Name</label><br>
-				<select>
+				<select id="companies" onchange="showInfo()">
 				<?php
 					$conn = getConnection();
 					$sql = "SELECT * FROM Company;";
@@ -18,13 +25,11 @@ require_once 'functions.php';
 					}
 
 					while($row = mysqli_fetch_array($result)) {
-						echo "<option>" . $row['CompanyName'] . "</option>";
+						echo "<option value=\"" . $row['CompanyName'] . "\">" . $row['CompanyName'] . "</option>";
+						echo "<span class=\"hidden\" id=\"" . $row['CompanyName'] . "\">" . $row['Street'] . " " . $row['Town'] . " " . $row['County'] . " " . $row['PhoneNo'] . " " . " " . $row['CreditLimit'] . "</span>";
 					}
 				?>
-					<option>company1</option>
-					<option>company2</option>
 				</select>
-<!--				<input type="text" name="companyName"><br>-->
 				<label>Street</label><br>
 				<input type="text" name="street"><br>
 				<label>Town</label><br>
@@ -45,6 +50,12 @@ require_once 'functions.php';
 			<img id="car" src="./images/car.png">
 		</div>
 	</section>
+	<script>
+	    function showInfo() {
+	        var CompanyName = document.getElementById('companies').value;
+	        //var str = document.getElementById(CompanyName).value
+	    }
+	</script>
 <?php
-include 'footer.php';
+    include 'footer.php';
 ?>
