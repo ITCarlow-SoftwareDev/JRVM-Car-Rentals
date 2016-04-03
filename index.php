@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Menu template</title>
+	<title>JRVM Rentals</title>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link href="./css/form.css" rel="stylesheet" type="text/css">
@@ -32,7 +32,7 @@ if(isset($_SESSION['username'])) {
 					<input type="text" name="username" class="index-input"><br>
 					<label>Password</label><br>
 					<input type="password" name="password" class="index-input">
-					<p id="index-error-msg">
+					<p id="error-msg">
 						<?php
 						if(isset($_GET['error_message'])) {
 							switch($_GET['error_message']) {

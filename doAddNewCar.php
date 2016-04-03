@@ -18,55 +18,59 @@
 	$theNumberOfDoors = $_POST['numberOfDoors'];
     $thePurchasePrice = $_POST['purchasePrice'];
     $theDateAddedToFleet = $_POST['dateAddedToFleet'];
-	//$theModelName = $_POST['modelName'];
-	$theEngineSize = $_POST['engineSize'];
+	$theEngineSize = $_POST['engineSize']; 
 	$theFuelType = $_POST['fuelType'];
+	$theModelID = $_POST['modelID'];
 	
-	//query to add a new record to Category table
-    $sql = "INSERT INTO Car(RegNo, Colour, ChassisNo, DateAdded, PurchasePrice, Doors, EngineSize, FuelType) VALUES ('"
-        . $theRegNum . "', '" . $theColour . "', '" . $theChassisNumber . "', '" . $theNumberOfDoors . "', '" . $thePurchasePrice . "', '" . $theDateAddedToFleet ."', '" . $theEngineSize."', '" . $theFuelType. "');";
+    $sql = "INSERT INTO Car(RegNo, Colour, ChassisNo, DateAdded, PurchasePrice, Doors, EngineSize, FuelType,ModelID) VALUES ('"
+        . $theRegNum . "', '" . $theColour . "', '" . $theChassisNumber ."', '" . $theDateAddedToFleet . "', '" . $thePurchasePrice . "', '" . $theNumberOfDoors . "', '" . $theEngineSize ."', '" .$theFuelType ."', '" .$theModelID."');";
+	//This Query works in Plesk -- INSERT INTO Car(RegNo, Colour, ChassisNo, DateAdded, PurchasePrice, Doors, EngineSize, FuelType,ModelID) VALUES ('4444LS1999', 'Pink','AAAASSSSDDDD0000', '2010-02-02','200000',5,1.6,'Diesel',3);
+	echo $sql; //for debug
 
     if(mysqli_query($conn, $sql)) {
-        // Insert successful.
-        header("location: addCompany.php");
+        // If above query is satisfied.
+       // header("location: addNewCar.php");
     } 
 	else {
-        die("Could not insert into database" . mysqli_error($conn));
+        die("Error !! Car not added to database. Check query and connection " . mysqli_error($conn));
     }
     mysqli_close($conn);
-    
-	?>
-	
-<!-- Show car details just added to database -->
+include 'header.php';	
+?>	
+<!-- An uneditable form to show user the car which they have just added to the database -->
 <form class="form" action="addNewCar.php" method="get">
 
 	  <h2>This car has been added to database</h2>
 	  
-	  <label>Registration Number</label>
-	  <input type="text" value="<?php echo $catId ?>" readonly>
+	  <label>Registration Number </label>
+	  <input type="text" value="<?php echo $theRegNum ?>" readonly>
 	  
-	  <label>Colour</label>
-	  <input type="text" value="<?php echo $costPerDay ?>" readonly>
+	  <label>Colour </label>
+	  <input type="text" value="<?php echo $theColour ?>" readonly>
 	  
-	  <label>Chassis Number (VIN)</label>
-	  <input type="number" value="<?php echo $fiveDayDisc ?>" readonly>
+	  <label>Chassis Number (VIN) </label>
+	  <input type="text" value="<?php echo $theChassisNumber ?>" readonly>
 	  
 	  <label>Number of Doors </label>
-	  <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
+	  <input type="number" value="<?php echo $theNumberOfDoors ?>" readonly>
 	  
 	  <label>Purchase Price </label>
-	  <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
+	  <input type="number" value="<?php echo $thePurchasePrice ?>" readonly>
 	  
-	  <label>Date added to fleet</label>
-	  <input type="date" value="<?php echo $tenDayDisc ?>" readonly>
+	  <label>Date added to fleet </label>
+	  <input type="date" value="<?php echo $theDateAddedToFleet ?>" readonly>
 	  
-	  <label>Engine Size</label>
-	  <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
+	  <label>Engine Size </label>
+	  <input type="number" value="<?php echo $theEngineSize ?>" readonly>
 	  
-	  <label>Fuel Type</label> <br>
-	  <input type="text" value="<?php echo $tenDayDisc ?>" readonly>
+	  <label>Fuel Type </label> <br>
+	  <input type="text" value="<?php echo $theFuelType ?>" readonly>
 	  
-	  <div class="rental-form-btn">
+	  <label>Model ID </label> <br>
+	  <input type="number" value="<?php echo $theModelID ?>" readonly>
+	  
+	  
+	  <div class="form-btn">
 		<input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
 	  </div>
 </form>

@@ -21,9 +21,9 @@
         // correct
         $updateSQL = "UPDATE Employee SET Password = '" . $password . "' WHERE UserName = '" . $username . "';";
         if(mysqli_query($conn, $updateSQL)) {
-            header("Location: changePassword.php?changePassword=true");
+            header("Location: changePassword.php?error_message=true");
         }
     } else {
         // return error message: previous message doesn't match
-        header("Location: changePassword.php?changePassword=false");
+        header("Location: changePassword.php?error_message=false");
     }

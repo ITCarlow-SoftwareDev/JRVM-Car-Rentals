@@ -15,7 +15,7 @@
   $sql="INSERT INTO Category (CategoryID, CostPerDay, FiveDayDiscount, TenDayDiscount)
   VALUES ('" . $catId . "', '" . $costPerDay . "', '" . $fiveDayDisc . "', '" . $tenDayDisc . "');";
   if(!mysqli_query($con, $sql)) {
-    die("An Error in the SQL Query: " . mysqli_error($con));
+    die("An Error in the SQL Add Category Query: " . mysqli_error($con));
   }
   mysqli_close($con);
 	include 'header.php';
@@ -31,7 +31,7 @@
   <input type="number" value="<?php echo $fiveDayDisc ?>" readonly>
   <label>Ten day Discount (%)</label>
   <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
-  <div class="rental-form-btn">
+  <div class="form-btn">
     <input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
   </div>
 </form>

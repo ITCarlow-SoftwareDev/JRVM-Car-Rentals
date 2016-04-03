@@ -10,7 +10,7 @@
 <form name="addCat" id="addCat" class="form" onsubmit="return confirmCheck()" action="doAddCategory.php" method="post">
   <h2>Add a New Rental Category</h2>
   <label for="listAddCat">Current Category List</label>
-  <select name="listAddCat" id="listAddCat" title="List of used category names" autofocus>
+  <select name="listAddCat" id="listAddCat" title="List of category names currently in use" autofocus>
     <?php 
       include 'listCatId.php'; // display the category id's in the select box
     ?>
@@ -19,17 +19,17 @@
   <input type="text" name="addCatId" id="addCatId" placeholder="Capital letter A-Z only" pattern="[A-Z]{1}"
   title="Capital letter A-Z only" oninput='checkCatId()' autocomplete="off" required>
   <label for="addCostPerDay">New Cost per Day</label>
-  <input type="number" name="addCostPerDay" id="addCostPerDay"
-  title="Please enter cost per day for vehicle" min="0" step=".01" required>
+  <input type="number" name="addCostPerDay" id="addCostPerDay" title="Please enter cost per day for vehicle"
+  placeholder="No currency symbol needed e.g. 24.99" min="0" step=".01" required>
   <label for="addFiveDayDisc">New Five Day Discount (%)</label>
-  <input type="number" id="addFiveDayDisc" name="addFiveDayDisc"
-  title="Please enter the five day discount as a percentage" min="0" max="100" step="1" required>
+  <input type="number" id="addFiveDayDisc" name="addFiveDayDisc" title="Please enter the five day discount as a percentage"
+  placeholder="Whole number between 0 and 100 e.g. 15" min="0" max="100" step="1" required>
   <label for="addTenDayDisc">New Ten Day Discount (%)</label>
-  <input type="number" name="addTenDayDisc" id="addTenDayDisc"
-  title="Please enter the ten day discount as a percentage" min="0" max="100" step="1" required>
-  <div class="rental-form-btn">
-    <button class="btnRed" type="reset">Clear</button>
-    <button class="btnGreen" type="submit">Submit</button>
+  <input type="number" name="addTenDayDisc" id="addTenDayDisc" title="Please enter the ten day discount as a percentage"
+  placeholder="Whole number between 0 and 100 e.g. 25" min="0" max="100" step="1" required>
+  <div class="form-btn">
+    <button class="btnRed" type="reset">Cancel</button>
+    <button class="btnGreen" type="submit">Save</button>
   </div>
 </form>
 <!-- image -->
