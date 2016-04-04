@@ -7,9 +7,12 @@
  */
 
     require_once 'functions.php';
-    $companyName = $_GET['company'];
+    $companyInfo = explode(",", $_POST['company']);
+    $companyName = $companyInfo[0];
     $sql = "DELETE FROM Company WHERE CompanyName = '" . $companyName . "'";
     $conn = getConnection();
+
+    echo $companyName;
 
     if (!mysqli_query($conn, $sql)) {
         die("error message: ". mysqli_errno($conn));

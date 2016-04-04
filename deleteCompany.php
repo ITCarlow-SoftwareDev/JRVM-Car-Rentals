@@ -25,7 +25,7 @@
 	}
 
 ?>
-	<section class="margin-top-100px" onload="setCompanyInfo(\"" . <?php echo $companyInfo;?> . "\")">
+	<section class="margin-top-100px">
 		<div class="form">
 			<h1><center>Delete a Company</center></h1>
 
@@ -40,14 +40,14 @@
                     ?>
                 </center>
             </p>
-			<form action="doDeleteCompany.php" method="post">
+			<form action="doDeleteCompany.php" method="post" onsubmit="return submit()">
 				<label>Company Name</label><br>
 				<?php
-					echo "<select id=\"companies\" onchange=\"showInfo()\">";
+					echo "<select id=\"companies\" name='company' onchange=\"showInfo()\">";
 
 					while($row = mysqli_fetch_array($result)) {
 
-						$companyInfo[$counter] = $row['Street'] . "," . $row['Town'] . "," . $row['County'] . "," . $row['PhoneNo'] . "," . $row['CreditLimit'];
+						$companyInfo[$counter] = $row['CompanyName'] . "," . $row['Street'] . "," . $row['Town'] . "," . $row['County'] . "," . $row['PhoneNo'] . "," . $row['CreditLimit'];
 						echo "<option value=\"" . $companyInfo[$counter] . "\">" . $row['CompanyName'] . "</option>";
 						$str += $companyInfo[$counter] + "|";
 						$counter++;
@@ -86,13 +86,19 @@
 			var choose = document.getElementById('companies').value;
 			var array = choose.split(",");
 
-			document.getElementById('street').value = array[0];
-			document.getElementById('town').value = array[1];
-			document.getElementById('county').value = array[2];
-			document.getElementById('telephoneNumber').value = array[3];
-			document.getElementById('creditLimite').value = array[4];
-
+			document.getElementById('street').value = array[1];
+			document.getElementById('town').value = array[2];
+			document.getElementById('county').value = array[3];
+			document.getElementById('telephoneNumber').value = array[4];
+			document.getElementById('creditLimite').value = array[5];
 	    }
+        
+        function submit() {
+            var companyName = document.getElementById('companies').value;
+            var aaa = confirm("Are you sure to delete " + companyName);
+
+            return false;
+        }
 
 	</script>
 <?php
