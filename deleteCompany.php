@@ -13,12 +13,13 @@ require_once 'functions.php';
 $conn = getConnection();
 $sql = "SELECT * FROM Company;";
 $counter = 0;
+$companyInfo = "";
 //$companyArray = array();
 if(!($result = mysqli_query($conn,$sql))) {
     die("sql script:" . mysqli_error($conn));
 }
 ?>
-	<section class="margin-top-100px">
+	<section class="margin-top-100px" onload="setCompanyInfo(\"" . <?php echo $companyInfo;?> . "\")">
 		<div class="form">
 			<h1><center>Delete a Company</center></h1>
 			<p>
@@ -38,16 +39,17 @@ if(!($result = mysqli_query($conn,$sql))) {
 					<?php
 
 					while($row = mysqli_fetch_array($result)) {
-						echo "<option value=\"" . $row['CompanyName'] . "\">" . $row['CompanyName'] . "</option>";
+						echo "<option value=\"" . $counter . "\">" . $row['CompanyName'] . "</option>";
                         $companyArray[$counter] = $row['CompanyName'] . "," . $row['Street'] . "," . $row['Town'] . "," . $row['County'] . "," . $row['PhoneNo'] . "," . $row['CreditLimit'];
+                        $companyInfo += $row['CompanyName'] . "," . $row['Street'] . "," . $row['Town'] . "," . $row['County'] . "," . $row['PhoneNo'] . "," . $row['CreditLimit'] . "|";
 //						echo "<span class=\"hidden\" id=\"" . $row['CompanyName'] . "\">" . $row['Street'] . " " . $row['Town'] . " " . $row['County'] . " " . $row['PhoneNo'] . " " . " " . $row['CreditLimit'] . "</span>";
 					}
 
-                    $firstCompany = explode(",", $companyArray[0]);
+                    $firstCompany = explode(",", $companyArray[""]);
 					?>
 				</select>
 				<label>Street</label><br>
-				<input type="text" value="<?php echo $firstCompany[0];?>"><br>
+				<input type="text" id="street" value="<?php echo $firstCompany[0];?>"><br>
 				<label>Town</label><br>
 				<input type="text" value="<?php echo $firstCompany[1];?>"><br>
 				<label>County</label><br>
@@ -67,6 +69,7 @@ if(!($result = mysqli_query($conn,$sql))) {
 		</div>
 	</section>
 	<script>
+        var companyInfo = "";
         function checkSubmit() {
             var companyName = document.getElementById('companies').value;
             var check = confirm("Are you sure for deleting " + companyName + "?");
@@ -79,9 +82,20 @@ if(!($result = mysqli_query($conn,$sql))) {
 
         }
 		function showInfo() {
-			var CompanyName = document.getElementById('companies').value;
+            document.getElementById('street').value = "<?php echo $firstCompany[2];?>"
+//			var CompanyName = document.getElementById('companies').value;
 			//var str = document.getElementById(CompanyName).value
 		}
+        
+        function getSelectIndex() {
+            var index = document.getElementById('companies').value;
+            return index;
+        }
+
+        function setCompanyInfo(var companyInfo) {
+            this.companyInfo = companyInfo;
+            alert(companyInfo);
+        }
 	</script>
 <?php
 include 'footer.php';
