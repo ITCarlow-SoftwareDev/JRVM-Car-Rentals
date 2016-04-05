@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link rel="stylesheet" type="text/css" href="./css/form.css">
 	<link rel="stylesheet" type="text/css" href="./css/vaidasCss.css">
+	<link rel="stylesheet" type="text/css" href="./css/mark.css">
 </head>
 <body>
 <?php
