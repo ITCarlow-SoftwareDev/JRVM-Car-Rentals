@@ -31,7 +31,7 @@
 			<p>
                 <center>
                     <?php
-                        if ($_GET['delete']) {
+                        if (ISSET($_GET['delete'])) {
                             echo $_GET['companyName'] . " has been deleted!";
                         } else {
                             echo "&nbsp;";

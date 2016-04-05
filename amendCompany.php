@@ -31,7 +31,7 @@ if(!($result = mysqli_query($conn,$sql))) {
 			<p>
 			<center>
 				<?php
-				if ($_GET['update']) {
+				if (ISSET($_GET['update'])) {
 					echo "Your changes have been saved!";
 				} else {
 					echo "&nbsp;";

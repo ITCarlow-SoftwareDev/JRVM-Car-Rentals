@@ -63,24 +63,20 @@ if (!isset($_SESSION['username'])) {
 						</li>
 					</ul>
 				</li>
-				<li><a href="acceptPayment.php" class="secondbar_item">Payments</a></li>
-	<!--
-				<li><a href="#" class="secondbar_item">Customer Accounts</a>
+				<li><a href="#" class="secondbar_item">Accounts</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
-					<ul id="customerAccounts" class="dropdown">
-						<li><a href="acceptPayment.php">Accept Payments</a></li>
+					<ul id="accounts" class="dropdown">
 						<li><a href="accountStatements.php">Account Statements</a></li>
+						<li><a href="acceptPayment.php.php">Accept Payments</a></li>
 					</ul>
 				</li>
-	-->
 				<li><a href="#" class="secondbar_item">Reports</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="reports" class="dropdown">
 						<li><a href="companyReport.php">Company</a></li>
 						<li><a href="carReport.php">Car</a></li>
 						<li><a href="rentalReport.php">Rental</a></li>
-						<!--*****!!!!!!!!!!Will be changed to another location lads !!!!!!!!!!*****-->					
-						<li><a href="accountStatements.php">Account Statements</a></li>
+
 					</ul>
 				</li>
 				<li><a href="#" class="secondbar_item">Blacklist</a>

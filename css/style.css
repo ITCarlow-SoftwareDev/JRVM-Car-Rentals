@@ -88,7 +88,7 @@ header {
 
 
 .top_menu li{
-	padding: 0 45px;
+	padding: 0 44px;
 }
 
 .top_menu li:hover {
@@ -118,32 +118,42 @@ header {
 }
 
 #fileMaintenance {
-	left: 293px;
-	width: 204px;
+	left: 289px;
+	width: 202px;
 }
 
 #fileMaintenance li {
-	width: 204px;
+	width: 202px;
+	padding: 0;
+}
+
+#accounts {
+	left: 493px;
+	width: 172px;
+}
+
+#accounts li {
+	width: 172px;
 	padding: 0;
 }
 
 #reports {
-	left: 662px;
-	width: 165px;
+	left: 667px;
+	width: 162px;
 }
 
 #reports li {
-	width: 165px;
+	width: 162px;
 	padding: 0;
 }
 
 #blacklist {
-	left: 829px;
-	width: 167px;
+	left: 831px;
+	width: 165px;
 }
 
 #blacklist li {
-	width: 167px;
+	width: 165px;
 	padding: 0;
 }
 
@@ -169,7 +179,7 @@ header {
 	position: absolute;
 	border: 1px solid black;
 	background: #fff;
-	margin-left: 204px;
+	margin-left: 202px;
 	top: -5px;
 }
 
