@@ -195,6 +195,7 @@ header {
 	width: 100%;
 	background-color: #00f900;
 	padding: 130px 0 130px 0;
+	min-height: 700px;
 }
 
 .container {
@@ -245,6 +246,37 @@ header {
 #error-msg{
 	color: red;
 	/*margin-left: 70px;*/
+	text-align: center;
+}
+
+/*amend / view company page*/
+#fixed-btn {
+	width: 350px;
+}
+
+#amendCompany-btn-group {
+	margin-right: 80px;
+}
+
+.hidden {
+	display: none;
+}
+
+#save {
+	width: 170px;
+}
+
+#cancel {
+	width: 170px;
+}
+
+/*company report page*/
+.company-report {
+	width: 100%;
+	font-size: 13px;
+}
+
+.company-report table thead tr th {
 	text-align: center;
 }
 

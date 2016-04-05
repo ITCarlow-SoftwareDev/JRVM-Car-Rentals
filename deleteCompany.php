@@ -28,7 +28,6 @@
 	<section class="margin-top-100px">
 		<div class="form">
 			<h1><center>Delete a Company</center></h1>
-
 			<p>
                 <center>
                     <?php
