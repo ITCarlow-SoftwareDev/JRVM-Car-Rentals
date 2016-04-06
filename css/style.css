@@ -283,11 +283,16 @@ header {
 /*company report page*/
 .company-report {
 	width: 100%;
-	font-size: 13px;
+	/*font-size: 13px;*/
 }
 
 .company-report table thead tr th {
 	text-align: center;
+}
+
+#company-report-btn {
+	width: 150px;
+	margin-top: 10px;
 }
 
 /*footer ------ start*/

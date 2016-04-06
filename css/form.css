@@ -132,7 +132,7 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
 
 .tableHead {
   height: 50px;
-  width: 950px;
+  width: 100%;
   text-align: center;
   background-color: #008CBA; /* Blue */
   color: white;
@@ -195,4 +195,28 @@ h5 {
 .Column{
 	width:120px;
 	
+}
+
+
+/*company report page*/
+#company-report-table {
+    width: 100%;
+    border: 3px solid #008CBA;
+}
+
+#company-report-thead {
+    height: 50px;
+    /*border-bottom: 2px solid;*/
+}
+
+#company-report-table tbody {
+    border: 1px solid black;
+}
+
+#company-report-table tbody tr td {
+    text-align: center;
+}
+
+.td {
+    background-color: #e6e6e6;
 }

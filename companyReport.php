@@ -14,8 +14,12 @@
 include 'header.php';
 require_once 'functions.php';
 
-$conn = getConnection();
 $sql = "SELECT * FROM Company";
+$conn = getConnection();
+
+if (isset($_GET['order'])) {
+	$sql = $sql . " ORDER BY Company.CumulativeRentals " . $_GET['order'];
+}
 
 if(!($result = mysqli_query($conn,$sql))) {
 	die("sql script:" . mysqli_error($conn));
@@ -26,46 +30,54 @@ if(!($result = mysqli_query($conn,$sql))) {
 		<div class="form company-report">
 			<h1><center>Company Report</center></h1>
 			<br>
-			<table>
-				<thead>
-					<tr>
-						<th>CompanyID</th>
-						<th>CompanyName</th>
-						<th>Street</th>
-						<th>Town</th>
-						<th>County</th>
-						<th>PhoneNo</th>
-						<th>CreditLimit</th>
+			<table id="company-report-table">
+				<thead class="tableHead">
+					<tr id="company-report-thead">
+						<th>Company Name</th>
+						<th>Address (first line)</th>
 						<th>CumulativeRentals</th>
+						<th>Blacklist date</th>
+						<th>CreditLimit</th>
 						<th>CurrentBalance</th>
-						<th>CumulativeBlacklists</th>
-						<th>DeleteFlag</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
+						$counter = 0;
+
 						while ($row = mysqli_fetch_array($result)) {
-							echo "<tr>";
-							echo "<td>" . $row['CompanyID'] . "</td>";
+							echo $counter%2!=0?"<tr class='td'>":"<tr>";
 							echo "<td>" . $row['CompanyName'] . "</td>";
 							echo "<td>" . $row['Street'] . "</td>";
-							echo "<td>" . $row['Town'] . "</td>";
-							echo "<td>" . $row['County'] . "</td>";
-							echo "<td>" . $row['PhoneNo'] . "</td>";
-							echo "<td>" . $row['CreditLimit'] . "</td>";
 							echo "<td>" . $row['CumulativeRentals'] . "</td>";
-							echo "<td>" . $row['CurrentBalance'] . "</td>";
 							echo "<td>" . $row['CumulativeBlacklists'] . "</td>";
-							echo "<td>" . $row['DeleteFlag'] . "</td>";
-
+							echo "<td>" . $row['CreditLimit'] . "</td>";
+							echo "<td>" . $row['CurrentBalance'] . "</td>";
 							echo "</td></tr>";
+
+							$counter++;
 						}
 					?>
 				</tbody>
 			</table>
+			<center>
+				<div>
+					<a href="javascript:;"><button class="btnGreen" id="company-report-btn">Descending</button></a>
+					<a href="javascript:;"><button class="btnRed" id="company-report-btn">Ascending</button></a>
+				</div>
+			</center>
 		</div>
 	</section>
 
+<script>
+	document.getElementsByClassName('btnGreen')[0].onclick = function () {
+		window.location.href = "/companyReport.php?order=DESC";
+	};
+
+	document.getElementsByClassName('btnRed')[0].onclick = function () {
+		window.location.href = "/companyReport.php?order=ASC";
+	};
+</script>
 <?php
 include 'footer.php';
 ?>
