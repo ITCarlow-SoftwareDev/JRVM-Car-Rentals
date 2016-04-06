@@ -5,24 +5,34 @@
 <section class="margin-top-100px">
 	<div class="form">
 		<h1><center>Add a Company</center></h1>
-		<p>&nbsp;</p>
-		<form action="doAddCompany.php" method="post">
+		<p>
+		<center>
+			<?php
+			if (ISSET($_GET['insert'])) {
+				echo "A new company added!";
+			} else {
+				echo "&nbsp;";
+			}
+			?>
+		</center>
+		</p>
+		<form action="doAddCompany.php" method="post" onsubmit="return checkSubmit()">
 			<label>Company Name</label><br>
-			<input type="text" name="companyName"><br>
+			<input type="text" name="companyName" required><br>
 			<label>Street</label><br>
-			<input type="text" name="street"><br>
+			<input type="text" name="street" required><br>
 			<label>Town</label><br>
-			<input type="text" name="town"><br>
+			<input type="text" name="town" required><br>
 			<label>County</label><br>
-			<input type="text" name="county"><br>
+			<input type="text" name="county" required><br>
 			<label>Telephone Number</label><br>
-			<input type="text" name="telephoneNumber"><br>
+			<input type="text" name="telephoneNumber" required><br>
 			<label>Credit Limit</label><br>
-			<input type="number" name="creditLimite"><br>
+			<input type="number" name="creditLimite" required><br>
 			<br>
 			<div class="btn-group">
-				<button class="btnRed">Clear</button>
-				<button class="btnGreen">Submit</button>
+				<button class="btnRed" type="reset">Clear</button>
+				<button class="btnGreen" type="submit">Submit</button>
 			</div>
 		</form>
 	</div>
@@ -30,6 +40,17 @@
 		<img id="car" src="./images/car.png">
 	</div>
 </section>
+<script>
+	function checkSubmit() {
+		var check = confirm("Are you sure to add this company?");
+
+		if (check == true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+</script>
 <?php 
 	include 'footer.php';
 ?>

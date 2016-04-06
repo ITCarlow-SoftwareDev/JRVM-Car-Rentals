@@ -59,15 +59,15 @@ if(!($result = mysqli_query($conn,$sql))) {
 				$firstCompany = explode(",", $companyInfo[0]);
 				?>
 				<label>Street</label><br>
-				<input type="text" id="street" name="street" value="<?php echo $firstCompany[1];?>" readonly><br>
+				<input type="text" id="street" name="street" value="<?php echo $firstCompany[1];?>" readonly required><br>
 				<label>Town</label><br>
-				<input type="text" id="town" name="town" value="<?php echo $firstCompany[2];?>" readonly><br>
+				<input type="text" id="town" name="town" value="<?php echo $firstCompany[2];?>" readonly required><br>
 				<label>County</label><br>
-				<input type="text" id="county" name="county" value="<?php echo $firstCompany[3];?>" readonly><br>
+				<input type="text" id="county" name="county" value="<?php echo $firstCompany[3];?>" readonly required><br>
 				<label>Telephone Number</label><br>
-				<input type="text" id="telephoneNumber" name="telephoneNumber" value="<?php echo $firstCompany[4];?>" readonly><br>
+				<input type="text" id="telephoneNumber" name="telephoneNumber" value="<?php echo $firstCompany[4];?>" readonly required><br>
 				<label>Credit Limit</label><br>
-				<input type="number" id="creditLimite" name="creditLimite" value="<?php echo $firstCompany[5];?>" readonly><br>
+				<input type="number" id="creditLimite" name="creditLimite" value="<?php echo $firstCompany[5];?>" readonly required><br>
 
 				<br>
 				<div class="btn-group" id="amendCompany-btn-group">
@@ -132,6 +132,10 @@ if(!($result = mysqli_query($conn,$sql))) {
 			var county = document.getElementById('county').value;
 			var telephoneNumber = document.getElementById('telephoneNumber').value;
 			var creditLimite = document.getElementById('creditLimite').value;
+
+			if (street=="" || town=="" || county=="" || telephoneNumber=="" || creditLimite=="") {
+				return false;
+			}
 
 			if (confirm("Are you sure to save your changes?")) {
 				window.location.href = "/doAmendCompany.php?companyName=" + companyName + "&street=" + street + "&town=" + town + "&county=" + county + "&telephoneNo=" + telephoneNumber + "&creditLimit=" + creditLimite;

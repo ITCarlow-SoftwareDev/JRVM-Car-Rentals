@@ -20,8 +20,9 @@
 
     if(mysqli_query($conn, $sql)) {
         // Insert successful.
-        header("location: addCompany.php");
+        header("location: addCompany.php?insert=true");
     } else {
+        header("location: addCompany.php?insert=false");
         die("Could not insert into database" . mysqli_error($conn));
     }
 

@@ -39,7 +39,7 @@
                     ?>
                 </center>
             </p>
-			<form action="doDeleteCompany.php" method="post" onsubmit="return submit()">
+			<form action="doDeleteCompany.php" method="post" onsubmit="return checkSubmit()">
 				<label>Company Name</label><br>
 				<?php
 					echo "<select id=\"companies\" name='company' onchange=\"showInfo()\">";
@@ -71,7 +71,7 @@
 
 				<br>
 				<div class="btn-group">
-					<button class="btnGreen">Delete</button>
+					<button class="btnGreen" type="submit">Delete</button>
 				</div>
 			</form>
 		</div>
@@ -92,11 +92,15 @@
 			document.getElementById('creditLimite').value = array[5];
 	    }
         
-        function submit() {
-            var companyName = document.getElementById('companies').value;
-            var aaa = confirm("Are you sure to delete " + companyName);
+        function checkSubmit() {
+            var companyName = document.getElementById('companies').value.split(",");
+            var check = confirm("Are you sure to delete " + companyName[0] + "?");
 
-            return false;
+            if (check == true) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
 	</script>

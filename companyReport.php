@@ -28,17 +28,17 @@ if(!($result = mysqli_query($conn,$sql))) {
 ?>
 	<section class="margin-top-100px">
 		<div class="form company-report">
-			<h1><center>Company Report</center></h1>
+			<h2><center>Company Report</center></h2>
 			<br>
 			<table id="company-report-table">
 				<thead class="tableHead">
 					<tr id="company-report-thead">
 						<th>Company Name</th>
 						<th>Address (first line)</th>
-						<th>CumulativeRentals</th>
-						<th>Blacklist date</th>
-						<th>CreditLimit</th>
-						<th>CurrentBalance</th>
+						<th>Cumulative Rentals</th>
+						<th>Cumulative Blacklists</th>
+						<th>Credit Limit</th>
+						<th>Current Balance</th>
 					</tr>
 				</thead>
 				<tbody>
