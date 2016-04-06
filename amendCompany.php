@@ -1,14 +1,10 @@
 <?php
 
-/*
+/**
  * Student Name: MINGJIE SHAO
  * Student ID: C00188468
  * Date: 30-03-2016
- * Todo:
- *   1. Check if the company has negative balance.
- *   2. Show company details when choosing a company.
- * Completed:
- *   3. Show the first option info at beginning.
+ * Purpose: Amend and view company
  * Bug:
  */
 include 'header.php';
@@ -25,12 +21,13 @@ if(!($result = mysqli_query($conn,$sql))) {
 }
 
 ?>
-	<section class="margin-top-100px">
+	<section>
 		<div class="form">
 			<h1><center>Amend / View a Company</center></h1>
 			<p>
 			<center>
 				<?php
+				// prompt message for user using the url GET parameter.
 				if (ISSET($_GET['update'])) {
 					echo "Your changes have been saved!";
 				} else {
@@ -72,8 +69,8 @@ if(!($result = mysqli_query($conn,$sql))) {
 				<br>
 				<div class="btn-group" id="amendCompany-btn-group">
 					<button class="btnGreen" id="fixed-btn" value="Amend">Amend</button>
-					<button class="btnGreen hidden" id="save">Save</button>
 					<button class="btnRed hidden" id="cancel" type="reset">Cancel</button>
+					<button class="btnGreen hidden" id="save">Save</button>
 				</div>
 			</form>
 		</div>
@@ -85,12 +82,9 @@ if(!($result = mysqli_query($conn,$sql))) {
 
 		// amend onclick listener
 		document.getElementById('fixed-btn').onclick = function () {
-//			this.style.visibility = "hidden";
 			this.className += " hidden";
 			var btnSave = document.getElementById('save');
 			var btnCancel = document.getElementById('cancel');
-//			btnSave.style.visibility = "visible";
-//			btnCancel.style.visibility = "visible";
 
 			//set input editable
 			document.getElementById('street').readOnly = false;
@@ -103,7 +97,7 @@ if(!($result = mysqli_query($conn,$sql))) {
 			btnCancel.className = "btnRed";
 		};
 
-		// dropdown box onchange listener
+		// drop-down box onchange listener
 		function showInfo() {
 			var choose = document.getElementById('companies').value;
 			var array = choose.split(",");
@@ -125,6 +119,7 @@ if(!($result = mysqli_query($conn,$sql))) {
 			document.getElementById('cancel').className += " hidden";
 		}
 
+		// When the save button has been clicked, prompt confirm box and refresh with parameters.
 		document.getElementById('save').onclick = function () {
 			var companyName = document.getElementById('companies').value.split(",")[0];
 			var street = document.getElementById('street').value;

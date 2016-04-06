@@ -1,9 +1,10 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
- * User: Jerryshao
- * Date: 16/2/24
- * Time: 00:33
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Allow user login.
+ * Bug:
  */
     require_once 'functions.php';
 

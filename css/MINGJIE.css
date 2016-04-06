@@ -1,0 +1,81 @@
+/**
+ * ========== For Change Password Page==========
+ */
+#changePassword-form {
+    margin: 150px 0 0 230px;
+}
+
+#changePassword-form form h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.btn-group {
+    float: right;
+    margin-right: 75px;
+}
+
+#error-msg{
+    color: red;
+    text-align: center;
+}
+
+/**
+ * ========== For Amend / View Page==========
+ */
+#fixed-btn {
+    width: 350px;
+}
+
+#amendCompany-btn-group {
+    margin-right: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+#save {
+    width: 170px;
+}
+
+#cancel {
+    width: 170px;
+}
+
+/**
+ * ========== For Company Report Page==========
+ */
+.company-report {
+    width: 100%;
+}
+
+.company-report table thead tr th {
+    text-align: center;
+}
+
+#company-report-btn {
+    width: 150px;
+    margin-top: 10px;
+}
+
+#company-report-table {
+    width: 100%;
+    border: 3px solid #008CBA;
+}
+
+#company-report-thead {
+    height: 50px;
+}
+
+#company-report-table tbody {
+    border: 1px solid black;
+}
+
+#company-report-table tbody tr td {
+    text-align: center;
+}
+
+.td {
+    background-color: #e6e6e6;
+}

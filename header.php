@@ -7,9 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="./css/form.css">
 	<link rel="stylesheet" type="text/css" href="./css/vaidasCss.css">
 	<link rel="stylesheet" type="text/css" href="./css/mark.css">
+	<link rel="stylesheet" type="text/css" href="./css/MINGJIE.css">
 </head>
 <body>
 <?php
+/**
+ * Check session available, if not, back to index page and ask user for login
+ */
 session_start();
 if (!isset($_SESSION['username'])) {
 	header("location: index.php?error_message=3");
@@ -43,7 +47,6 @@ if (!isset($_SESSION['username'])) {
 								<li><a href="addNewCar.php">Car</a></li>
 								<li><a href="addCompany.php">Company</a></li>
 								<li><a href="addCategory.php">Category</a></li>
-								<!-- <li><a href="#">Model</a></li> -->
 							</ul>
 						</li>
 						<li><a href="#">Delete</a>
@@ -51,7 +54,6 @@ if (!isset($_SESSION['username'])) {
 								<li><a href="deleteCar.php">Car</a></li>
 								<li><a href="deleteCompany.php">Company</a></li>
 								<li><a href="deleteCategory.php">Category</a></li>
-								<!-- <li><a href="#">Model</a></li> -->
 							</ul>
 						</li>
 						<li><a href="#">Amend / View</a>

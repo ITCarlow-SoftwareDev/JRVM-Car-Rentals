@@ -1,13 +1,13 @@
 <?php
 
-/*
+/**
  * Student Name: MINGJIE SHAO
  * Student ID: C00188468
  * Date: 30-03-2016
- * Todo:
+ * Purpose: A report for all companies.
+ * Completed:
  *   1. Check if the company has negative balance.
  *   2. Show company details when choosing a company.
- * Completed:
  *   3. Show the first option info at beginning.
  * Bug:
  */
@@ -24,7 +24,6 @@ if (isset($_GET['order'])) {
 if(!($result = mysqli_query($conn,$sql))) {
 	die("sql script:" . mysqli_error($conn));
 }
-
 ?>
 	<section class="margin-top-100px">
 		<div class="form company-report">
@@ -46,7 +45,8 @@ if(!($result = mysqli_query($conn,$sql))) {
 						$counter = 0;
 
 						while ($row = mysqli_fetch_array($result)) {
-							echo $counter%2!=0?"<tr class='td'>":"<tr>";
+							// If the index of row is even number, background color is grey otherwise is white.
+							echo $counter%2!=0?"<tr class='td'>":"<tr>"; // Conditional operator
 							echo "<td>" . $row['CompanyName'] . "</td>";
 							echo "<td>" . $row['Street'] . "</td>";
 							echo "<td>" . $row['CumulativeRentals'] . "</td>";
@@ -71,6 +71,7 @@ if(!($result = mysqli_query($conn,$sql))) {
 
 <script>
 	document.getElementsByClassName('btnGreen')[0].onclick = function () {
+		// Reference: JavaScript Window Location. 2016. JavaScript Window Location. [ONLINE] Available at: http://www.w3schools.com/js/js_window_location.asp. [Accessed 06 April 2016].
 		window.location.href = "/companyReport.php?order=DESC";
 	};
 

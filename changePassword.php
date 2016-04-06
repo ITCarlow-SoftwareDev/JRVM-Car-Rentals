@@ -1,4 +1,11 @@
 <?php
+/**
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Allow users change their password.
+ * Bug:
+ */
 	include 'header.php';
 ?>
 <!-- Todo your works -->
@@ -32,6 +39,7 @@
 	</div>
 
 	<script>
+		// Ask users if they are sure to change their password.
 		function checkPassword(){
 			var password = document.getElementById('password').value;
 			var confirmPassword = document.getElementById('confirmPassword').value;

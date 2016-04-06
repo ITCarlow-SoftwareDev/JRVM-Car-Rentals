@@ -1,3 +1,12 @@
+<?php
+/**
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Public footer file for all screens.
+ * Bug:
+ */
+?>
 	    	</div>
 	    </section>
 
@@ -7,6 +16,7 @@
     </div>
 
 	<script>
+		// When user click a menu, it will have a underline style
 		window.onload = function () {
 			var path = window.location.pathname;
 			var filename = path.split("/")[1];
@@ -41,6 +51,7 @@
 			}
 		};
 
+		// Add an underline for the target menu.
 		function underline (tag) {
 			var list = document.getElementById('top_menu').childNodes;
 

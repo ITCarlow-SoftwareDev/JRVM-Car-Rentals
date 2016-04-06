@@ -1,9 +1,10 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Jerryshao
- * Date: 16/4/3
- * Time: 10:17
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Delete a company.
+ * Bug:
  */
 
     require_once 'functions.php';

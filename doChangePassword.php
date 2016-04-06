@@ -1,9 +1,10 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
- * User: jerryshao
- * Date: 29/02/16
- * Time: 11:25
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Change password.
+ * Bug:
  */
     require_once 'functions.php';
     session_start();

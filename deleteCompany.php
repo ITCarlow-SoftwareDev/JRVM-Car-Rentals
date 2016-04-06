@@ -1,14 +1,10 @@
 <?php
 
-    /*
+    /**
      * Student Name: MINGJIE SHAO
      * Student ID: C00188468
      * Date: 30-03-2016
-     * Todo:
-     *   1. Check if the company has negative balance.
-     *   2. Show company details when choosing a company.
-     * Completed:
-     *   3. Show the first option info at beginning.
+     * Purpose: Delete a company
      * Bug:
      */
     include 'header.php';
@@ -16,7 +12,6 @@
 
 	$conn = getConnection();
 	$sql = "SELECT * FROM Company;";
-//	$companyInfo = "";
 	$counter = 0;
 	$str = "";
 
@@ -25,7 +20,7 @@
 	}
 
 ?>
-	<section class="margin-top-100px">
+	<section>
 		<div class="form">
 			<h1><center>Delete a Company</center></h1>
 			<p>

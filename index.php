@@ -5,10 +5,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<link href="./css/form.css" rel="stylesheet" type="text/css">
-	<link href="./css/index.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./css/MINGJIE.css">
 </head>
 <body>
 <?php
+/**
+ * Check user session and login status:
+ *   if user has logged in, back to rental.php
+ *   if not, stay in this page for user to login
+ */
 session_start();
 if(isset($_SESSION['username'])) {
 	header("location: rental.php");
@@ -34,6 +39,12 @@ if(isset($_SESSION['username'])) {
 					<input type="password" name="password" class="index-input">
 					<p id="error-msg">
 						<?php
+						/**
+						 * Solve error parameters from url by GET method:
+						 *   1. The username which user typed in does not exist in database.
+						 *   2. The password for the user was incorrect.
+						 *   3. Session does not available anymore.
+						 */
 						if(isset($_GET['error_message'])) {
 							switch($_GET['error_message']) {
 								case '1': echo "Username doesn't exist.";
@@ -51,8 +62,6 @@ if(isset($_SESSION['username'])) {
 
 				</form>
 			</div>
-
-
 
 <?php
 	include 'footer.php';

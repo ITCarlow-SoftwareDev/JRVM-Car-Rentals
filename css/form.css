@@ -3,12 +3,12 @@
 	text-align: left;
 	box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding: 10px 10px 30px 10px;
-  margin: 30px auto;
+    margin: 30px auto;
 	border-radius: 15px;
-  border: 2px solid #ccc; /* Dark Grey */
+    border: 2px solid #ccc; /* Dark Grey */
 }
-table,tr,td{
 
+table,tr,td {
     border-collapse: collapse;
     border: 1px solid #008CBA;
 	padding: 7px;
@@ -195,28 +195,4 @@ h5 {
 .Column{
 	width:120px;
 	
-}
-
-
-/*company report page*/
-#company-report-table {
-    width: 100%;
-    border: 3px solid #008CBA;
-}
-
-#company-report-thead {
-    height: 50px;
-    /*border-bottom: 2px solid;*/
-}
-
-#company-report-table tbody {
-    border: 1px solid black;
-}
-
-#company-report-table tbody tr td {
-    text-align: center;
-}
-
-.td {
-    background-color: #e6e6e6;
 }

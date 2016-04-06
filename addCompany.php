@@ -1,8 +1,14 @@
 <?php
+/**
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Add a new company.
+ * Bug:
+ */
 	include 'header.php';
 ?>
-<!-- Todo your works -->
-<section class="margin-top-100px">
+<section>
 	<div class="form">
 		<h1><center>Add a Company</center></h1>
 		<p>

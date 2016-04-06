@@ -1,12 +1,11 @@
 <?php
 /**
- * Created by IntelliJ IDEA.
- * User: Jerryshao
- * Date: 2016/2/24
- * Time: 10:43
+ * Student Name: MINGJIE SHAO
+ * Student ID: C00188468
+ * Date: 30-03-2016
+ * Purpose: Allow user logout.
+ * Bug:
  */
-
-
     session_start();
 
     if (session_destroy()) {
