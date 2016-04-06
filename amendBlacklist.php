@@ -18,7 +18,7 @@ Purpose:This screen is used for add companies blacklist  -->
   <div id="formLeft">
 	  <label >Select Company</label>
 	  <select class="inputFields" name="listCompanies" id="listCompanies" onchange='populate()'  title="Companies" required autofocus>
-	  <option value=""></option>
+	  <option value="">Select Company</option>
 	  <?php 
 		// getting companis list from list companies file 
 		include 'vlistBlacklistedCompanies.php'; 	  
@@ -28,25 +28,25 @@ Purpose:This screen is used for add companies blacklist  -->
 	  <input class="inputFields" type="text" name="companyID" id="companyID" style="display: none;">
 	
 	  <label for="street">Street</label>  
-	  <input class="inputFields" type="text" name="street" id="street"  title="street" required disabled>
+	  <input class="inputFields" type="text" name="street" id="street"  title="street" required readonly>
 	  
 	  <label for="town">Town</label>  
-	  <input class="inputFields" type="text" id="town" name="town"  title="town" required disabled>
+	  <input class="inputFields" type="text" id="town" name="town"  title="town" required readonly>
 	  
 	  <label for="town">County</label>  
-	  <input class="inputFields" type="text" id="county" name="county"  title="county" required disabled>
+	  <input class="inputFields" type="text" id="county" name="county"  title="county" required readonly>
 	  </div>
 		<div id="formRight">
 	  
-	  <label for="town">Amount owed at Blacklist Date</label>  
-	  <input class="inputFields"  type="number" id="balanceOnStarting" name="balanceOnStarting"  title="balanceOnStarting" required >
+	  <label for="town">Amount owed at Blacklist Date</label>  									
+	  <input class="inputFields"  type="text" id="balanceOnStarting" name="balanceOnStarting"  title="balanceOnStarting" required >	<!-- d is for number -->
 	  
 	  
 	  <label for="town">Amount owed at Present</label>  
 	  <input class="inputFields"  type="number" id="currentBalance" name="currentBalance"  title="currentBalance" required readonly>
 	  
 	  <label for="town">Credit Limit</label>   
-	  <input class="inputFields" type="number" id="limit" name="limit"  title="limit" required disabled>
+	  <input class="inputFields" type="number" id="limit" name="limit"  title="limit" required readonly>
 	  
 	  <label for="town">Date Blacklisted</label>  
 	  <input class="inputFields" type="date" id="dateBlacklisted" name="dateBlacklisted"  title="dateBlacklisted" required >
@@ -95,26 +95,28 @@ var newDate =document.getElementById("dateBlacklisted").value;
 
 	// form validation
 function validInputs(){
-var todaysDate = new Date();
-var day = todaysDate.getDate();
-// adding 1 because month array staart from 0
-var month = todaysDate.getMonth()+1;
-var year = todaysDate.getFullYear();
-// making date string to compare with entered date adding 0 before month because method retuns single number 
-var dateString = year+ "-"+"0"+month+ "-"+ day;
-
+	//http://www.webdeveloper.com/forum/showthread.php?67608-Date()-format-as-mm-dd-yyyy at 05-04-2016 date format
+var today = new Date(); 
+var dd = today.getDate(); 
+var mm = today.getMonth()+1;//January is 0! 
+var yyyy = today.getFullYear(); 
+if(dd<10){dd='0'+dd}; 
+if(mm<10){mm='0'+mm}; 
+ // end of reference
+var date = yyyy+'-'+mm+'-'+dd; 
 var newDate =document.getElementById("dateBlacklisted").value;
+
 	if (document.getElementById("balanceOnStarting").value ==0){
 		alert("Please enter valid amount Balance on Start (Can't be 0)");
 		return false;
 	}
-	if(newDate >dateString){
+	else if(date<newDate){
 		alert("Please enter valid date (Can't be future date)");		
 		return false;
 	}
 	else{
 		confirmation();
-		//onclick="return confirmation()"
+		
 	}
 }
 </script>

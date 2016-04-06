@@ -5,6 +5,7 @@
   Purpose: Delete a record from the Category table
 -->
 <?php
+  include 'header.php';
   require_once 'functions.php';
   $con = getConnection();
   $catId = $_POST['delCatId'];
@@ -17,7 +18,6 @@
     die("An Error in the SQL Delete Category Query: " . mysqli_error($con));
   }
   mysqli_close($con);
-	include 'header.php';
 ?>
 <!-- form to show user what they deleted -->
 <form class="form" action="deleteCategory.php" method="get">
@@ -31,7 +31,7 @@
   <label>Ten Day Discount (%)</label>
   <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
   <div class="form-btn">
-    <input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
+    <input type="submit" class="btnGreen" value="Back">
   </div>
 </form>
 <!-- image -->

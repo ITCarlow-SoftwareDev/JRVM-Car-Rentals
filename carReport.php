@@ -3,31 +3,22 @@ Recommended browser - Google Chrome
  Author         : Ronan Timmons
  Student No     : C00197150
  Date created   : 30/3/2016
- Last edited 	:
 
- Unit 4 
- Purpose        : Allow user to view all details for each car currently in the fleet. The user
+ Unit 3 
+ Purpose        : Allow user to view all details for each car currently in the system. The user
 				  can also view these details in a different order i.e. in order of popularity
 				  and in order of oldest to newest.
-				  
-//From plesk -
-SELECT Car.RegNo,Status,DateAdded,CumulativeRentals,
-	   Model.Model,Manufacturer
-FROM Car INNER JOIN Model ON
-	   Car.ModelID = Model.ModelID
-WHERE  Car.DeleteFlag = 0 Order By Model  
-
 -->
 <?php
+	//Reuse code
 	include 'header.php';
 	require_once 'functions.php';
 	$conn = getConnection();
 ?>
-	&nbsp
 	<!-- when the user clicks each button the form data is sent to the php using POST -->
 	<form action="carReport.php" method="POST" class="form" id="carReport" name ="carReport">
 	
-		<h2>Rental Report</h2>
+		<h2>Car Report</h2>
 		<input type="hidden" name="choice"/> <!-- to hold value of button clicked -->
 		<div align = 'center'>
 			<h5>Click button to change details in desired order</h5>
@@ -61,6 +52,7 @@ WHERE  Car.DeleteFlag = 0 Order By Model
 	
 </script>
 	<?php
+		// set form to display data in order of model initially 
 		$choice = "Model";         
 		if (ISSET($_POST['choice'])){
 			$choice = $_POST['choice'];
@@ -68,6 +60,7 @@ WHERE  Car.DeleteFlag = 0 Order By Model
 		if($choice == "Model"){
 	?>
 			<script>
+				// when choice = "Model", disable model button , enable others 
 				document.getElementById("orderOnModel").disabled = true;
 				document.getElementById("orderOnPop").disabled = false;
 				document.getElementById("orderOldToNew").disabled = false;
@@ -75,7 +68,7 @@ WHERE  Car.DeleteFlag = 0 Order By Model
 					<?php
 						//This query will select fields from the Car table and the Model table
 						//Be aware the two tables are joined creating one big table (Car/Model)
-						//This will display Car details in descending order of the Model field 
+						//This will display Car details in descending order of the Model field by default 
 						$sql = "SELECT Model, Manufacturer, RegNo, Status, DateAdded, CumulativeRentals
 								FROM Car INNER JOIN Model ON
 								Car.ModelID = Model.ModelID
@@ -119,8 +112,8 @@ WHERE  Car.DeleteFlag = 0 Order By Model
 		function produceReport($conn,$sql){
 			//mysqli_query will perform a query against the database
 			$result = mysqli_query($conn,$sql);
-			
-			echo "<div id='reportView'>
+			// echo table to screen
+			echo "<div>
 			<div align = 'center'>
 				<table>
 					<tr>
@@ -134,7 +127,7 @@ WHERE  Car.DeleteFlag = 0 Order By Model
 			</div>";
 					
 			while ($row=mysqli_fetch_array($result)){ 
-					//set up the date for display 
+					// echo row and data in each row
 					echo "<tr>
 					<td>" . $row ['Model'] . "</td>
 					<td>" . $row ['Manufacturer'] . "</td>
@@ -150,5 +143,6 @@ WHERE  Car.DeleteFlag = 0 Order By Model
 						?>
 		</div>							
 <?php 
+	//Reuse code
 	include 'footer.php';
 ?>

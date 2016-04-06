@@ -26,17 +26,16 @@ if (!isset($_SESSION['username'])) {
 				<span><a href="#"><?php echo $_SESSION['username']; ?>&nbsp;<img id="dropdown_icon" src="./images/dropdown.png"></a></span>
 				<ul class="dropdown" id="username_dropdown">
 					<a href="changePassword.php"><li>Change Password</li></a>
-					<a href="#"><li>Set up</li></a>
 					<a href="doLogout.php"><li>Log out</li></a>
 				</ul>
 			</div>
 		</div>
 		<!-- menu -->
 		<nav class="secondbar">
-			<ul class="top_menu">
-				<li class="menu_active"><a href="rental.php" class="secondbar_item">Rentals</a></li>
-				<li><a href="return.php" class="secondbar_item">Returns</a></li>
-				<li><a href="#" class="secondbar_item">Maintenance</a>
+			<ul class="top_menu" id="top_menu">
+				<li id="menu-rental"><a href="rental.php" class="secondbar_item">Rentals</a></li>
+				<li id="menu-return"><a href="return.php" class="secondbar_item">Returns</a></li>
+				<li id="menu-maintenance"><a href="#" class="secondbar_item">Maintenance</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="fileMaintenance" class="dropdown">
 						<li><a href="#">Add</a>
@@ -64,14 +63,14 @@ if (!isset($_SESSION['username'])) {
 						</li>
 					</ul>
 				</li>
-				<li><a href="#" class="secondbar_item">Accounts</a>
+				<li id="menu-account"><a href="#" class="secondbar_item">Accounts</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="accounts" class="dropdown">
 						<li><a href="accountStatements.php">Account Statements</a></li>
-						<li><a href="acceptPayment.php.php">Accept Payments</a></li>
+						<li><a href="acceptPayment.php">Accept Payments</a></li>
 					</ul>
 				</li>
-				<li><a href="#" class="secondbar_item">Reports</a>
+				<li id="menu-report"><a href="#" class="secondbar_item">Reports</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="reports" class="dropdown">
 						<li><a href="companyReport.php">Company</a></li>
@@ -80,7 +79,7 @@ if (!isset($_SESSION['username'])) {
 
 					</ul>
 				</li>
-				<li><a href="#" class="secondbar_item">Blacklist</a>
+				<li id="menu-blacklist"><a href="#" class="secondbar_item">Blacklist</a>
 					&nbsp;<img id="dropdown_icon" src="./images/dropdown.png">
 					<ul id="blacklist" class="dropdown">
 						<li><a href="amendBlacklist.php">Amend / View</a></li>

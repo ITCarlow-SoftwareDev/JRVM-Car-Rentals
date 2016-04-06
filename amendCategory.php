@@ -13,7 +13,7 @@
   <select name="listAmendCat" id="listAmendCat" onchange='populate()' title="Please select a category id from the list" required autofocus>
     <option value="">Select a Category</option>
     <?php 
-      include 'listCategory.php'; // display the category id's in the select box
+      include 'doListCategoryA.php'; // display the category id's in the select box
     ?>
   </select>
   <!-- hidden input box to store the category id -->
@@ -22,6 +22,7 @@
   <input type="number" name="amendCostPerDay" id="amendCostPerDay"
   title="Please enter cost per day for vehicle" min="0" step=".01" required disabled>
   <label for="amendFiveDayDisc">Five day Discount (%)</label>
+  <!-- Allow user to enter whole numbers between 0 and 100 inclusive -->
   <input type="number" id="amendFiveDayDisc" name="amendFiveDayDisc"
   title="Please enter the five day discount as a percentage" min="0" max="100" step="1" required disabled>
   <label for="amendTenDayDisc">Ten day Discount (%)</label>
@@ -38,7 +39,7 @@
   <img id="car" src="./images/car.png">
 </div>
 <script>
-  // populate() displays the details for the selected category
+  // display the details for the selected category
   function populate(){
     var sel = document.getElementById("listAmendCat");
     var result = sel.options[sel.selectedIndex].value;
@@ -49,16 +50,15 @@
     document.getElementById("amendTenDayDisc").value = categoryDetails[3];
     document.getElementById("amendBtn").disabled = false;
   } // end populate
-  // toggleLock() toggles the buttons and input fields,
-  // depending on the value of the amend button
+  // toggles the buttons and input fields depending on the value of the amend button
   function toggleLock() {
     if(document.getElementById("amendBtn").value == "Amend") {
       document.getElementById("amendCostPerDay").disabled = false;
       document.getElementById("amendFiveDayDisc").disabled = false;
       document.getElementById("amendTenDayDisc").disabled = false;
       document.getElementById("amendBtn").value = "View";
-      // show the "Save Changes" button
-      document.getElementById("btnSaveChanges").style.display = "inline";
+      // http://www.w3schools.com/jsref/prop_style_display.asp [Accessed 25 Mar. 2016].
+      document.getElementById("btnSaveChanges").style.display = "inline"; // display the "Save Changes" button
     }
     else {
       document.getElementById("amendCostPerDay").disabled = true;

@@ -3,10 +3,16 @@
 	text-align: left;
 	box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding: 10px 10px 30px 10px;
-    margin: 30px auto;
+  margin: 30px auto;
 	border-radius: 15px;
-    border: 2px solid #ccc; /* Dark Grey */
+  border: 2px solid #ccc; /* Dark Grey */
 }
+table,tr,td{
+
+    border-collapse: collapse;
+    border: 1px solid #008CBA;
+	padding: 7px;
+	}
 
 .form input, select, textarea {
 	width: 70%;
@@ -24,9 +30,37 @@
   margin: 0 80px 0 0;
 }
 
-/*-------- Mark Kelly --------------*/
+fieldset {
+  width: 460px;
+  padding: 10px 30px 10px 10px;
+  margin: 10px 0 10px 0;
+  float: left;
+  box-sizing: border-box;
+  border: 2px solid #008CBA; /* Blue */
+}
 
-.form button { /*-------- Buttons need to be changed to input type="button" --------------*/
+fieldset textarea {
+  width: 70%;
+  height: 93px;
+  padding: 10px 0 0 8px;
+  margin-bottom: 10px;
+  color: black;
+  resize: none;
+}
+
+legend { 
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+/*-------- Button Styles ------------*/
+
+.form button {
   width: 105px;
   font-size: 14px;
   padding: 3px 5px;
@@ -92,71 +126,9 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type
   color: white;
 }
 
-.returnDate {
-  float: left;
-  width: 10%;
-}
+/*-------- End Button Styles ------------*/
 
-#btnPrint {
-  width: 180px;
-}
-
-#btnSuccess {
-  width: 250px;
-  float: right;
-}
-
-#btnSaveChanges {
-  /*width: 200px;*/
-}
-
-#rentalForm {
-  width: 950px;
-  padding: 20px;
-}
-
-#rentalForm button {
-  float: right;
-}
-
-#formLeft {
-  float: left;
-  width: 40%;
-}
-
-#formRight {
-  float: left;
-  width: 59%;
-  /*height: 342px;*/
-}
-
-#available_cars {
-  width: 400px;
-  height: 280px;
-  margin-left: 70px;
-  border: 1px solid #999;
-}
-
-h2 {
-  text-align: center;
-  margin: 10px 0 20px 0;
-}
-
-/*-------- Report Tables --------------*/
-
-#rentalReport {
-  width: 950px;
-  padding: 20px;
-}
-
-fieldset textarea {
-  width: 70%;
-  height: 93px;
-  padding: 10px 0 0 8px;
-  margin-bottom: 10px;
-  color: black;
-  resize: none;
-}
+/*-------- Table Styles ------------*/
 
 .tableHead {
   height: 50px;
@@ -180,113 +152,12 @@ fieldset textarea {
   border-left-style:none;
 }
 
-.tdAlignLeft{
-  width: 330px;
-  text-align: left;
-}
-
-/* even rows are Grey */
+/* W3Schools: The :nth-child(n) selector matches every element that is the nth child,
+   regardless of type, of its parent. Even rows are Grey */
 .reportTable tr:nth-child(even){background-color: #e6e6e6;}
 
-.btnClientInfo {
-  float: right;
-}
+/*-------- End Table Styles ------------*/
 
-/* Rental report table head */
-#companyName {
-  border: 2px solid #008CBA; /* Blue */
-  width: 330px;
-}
-
-#dateOfRental {
-  border: 2px solid #008CBA; /* Blue */
-  width: 180px;
-}
-
-#durationOfRental {
-  border: 2px solid #008CBA; /* Blue */
-  width: 180px;
-}
-
-#costOfRental {
-  border: 2px solid #008CBA; /* Blue */
-  width: 196px;
-}
-
-#btnRentalReport {
-  margin: 0 0 0 0;
-}
-
-fieldset {
-  width: 460px;
-  padding: 10px 30px 10px 10px;
-  margin: 10px 0 10px 0;
-  float: left;
-  box-sizing: border-box;
-  border: 2px solid #008CBA; /* Blue */
-}
-
-legend { 
-  font-weight: bold;
-  padding: 0 3px;
-}
-
-#companyFieldset {
-  width: 100%;
-}
-
-#left {
-  float: left;
-  width: 50%;
-}
-
-#right {
-  float: left;
-  width: 50%;
-  /*height: 342px;*/
-}
-
-/* Account Info Fieldset */
-.fieldsetRight {
-  float: right;
-}
-
-#rentalButtons {
-  clear: both;
-  float: right;
-}
-
-#tdModelName {
-  width: 250px;
-  text-align: left;
-}
-
-#thModelName {
-  border: 2px solid #008CBA; /* Blue */
-  width: 266px;
-}
-
-.carTable {
-  border: 2px solid #008CBA; /* Blue */
-  width: 130px;
-}
-
-#thRegNo {
-  border: 2px solid #008CBA; /* Blue */
-  padding-right: 20px;
-}
-
-#rentalAgreement {
-  width: 800px;
-  margin-left: 60px;
-  padding: 20px 60px 20px 60px;
-}
-
-/*----------------------*/
-
-
-
-/*-------- End Mark Kelly --------------*/
 #addNewCarForm{
 	width:950px; 
 	 padding: 20px;

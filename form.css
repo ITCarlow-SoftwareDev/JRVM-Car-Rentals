@@ -312,10 +312,24 @@ legend {
 	 padding: 10px;
 	 
 }
+.statementTable {
+  height: 50px;
+  width: 120px;
+  text-align: center;
+  background-color: #008CBA; /* Blue */
+  color: white;
+}
+.statementTableRow {
+  border: 2px solid #008CBA; /* Blue */
+  width: 40px;
+}
 #prepareAccount{
-	width:950px;
+	width:800px;
 	 padding: 10px;
 	 
+}
+#fieldsetStatement{
+	width:350px;
 }
 h3 {
   text-align: center;

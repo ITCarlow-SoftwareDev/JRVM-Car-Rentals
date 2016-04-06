@@ -13,7 +13,7 @@
   <select name="listDeleteCat" id="listDeleteCat" onchange='populate()' title="List of category id's" required autofocus>
   <option value="">Select a category to delete</option>
     <?php 
-      include 'listCategory.php'; // display the category id's in the select box
+      include 'doListCategoryA.php'; // display the category id's in the select box
     ?>
   </select>
   <!-- hidden input box to store the category id -->
@@ -34,7 +34,7 @@
   <img id="car" src="./images/car.png">
 </div>
 <script>
-  // populate() displays the details for the selected category
+  // display the details for the selected category
   function populate(){
     var sel = document.getElementById("listDeleteCat");
     var result = sel.options[sel.selectedIndex].value;
@@ -44,7 +44,7 @@
     document.getElementById("delFiveDayDisc").value = categoryDetails[2];
     document.getElementById("delTenDayDisc").value = categoryDetails[3];
   } // end populate
-  // confirmCheck() prompts user to confirm details before submiting
+  // prompt user to confirm details before submiting
   function confirmCheck() {
     var response = confirm("Are you sure you want to delete this record!?");
     if(response == true) {

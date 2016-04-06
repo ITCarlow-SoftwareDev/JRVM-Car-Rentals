@@ -9,53 +9,59 @@ div.returnTable {
 	/*--------scroll bar in the table only on right side no bar in the bottom --------------*/
 	overflow-y: scroll;
 	height: 150px;
-	width:900px;
-
 }
-
-
-table,tr,td {
+#returnTableHeader,tr,td{
 /*-------- setting borders on every row-column-------------*/
     border-collapse: collapse;
     border: 1px solid black;
 	padding: 7px;
-
+	}
+/*-------    return table style        -------------*/
+.returnTable{
+	border: 2px solid #008CBA;
+	border-top:none;
+	
+	/*make treturn table tosame size us headings*/
+	box-sizing: border-box;
 }
-/*--------bordeer arround full return table -------------*/
-.fullTable{
-	border: 1px solid black;
-	width:900px;
-}
-
 /*-------- setting columns in return table what all of them will be same width-------------*/
 .tableColumn{
-	width:140px;
-	
+	width:150px;	
 }
-.headerColumn{
-	width:75px;
-	text-align:left;
+/*-------- every single heading column style required to get centered on top column-------------*/
+.headerColumn1{
+	width:130px;
+	text-align:center;
 }
-
-#returnTable{
-	
-	width:890px;
+.headerColumn2{
+	width:130px;	
 }
-
+.headerColumn3{
+	width:130px;	
+}
+.headerColumn4{
+	width:130px;
+}
+.headerColumn5{
+	width:130px;	
+}
+.headerColumn6{
+	width:130px;
+	padding-right:30px;
+}
 #blacklistForm{
-	width:900px;
+	width:950px;
 	margin: 30px 15px;
-
 }
 .textareaReturn{
-	padding-top:20px;
+	padding-top:30px;
 	
 	
 }
 /*-------- return screen textarea style-------------*/
-#textArea{
-	width:300px;
+#textArea{	
 	color:red;
+	 resize: none;
 }
 /*-------- showing message after process are done------------*/
 #confirmationMessage{
@@ -68,9 +74,22 @@ table,tr,td {
 	margin-left:0px;
 	
 }
+/* used for change*/
 #accidentCheckBox{
 	color:red;
 }
+/* used for changing color in return table if returns are late or cars have to be returned today*/
+#tableRow{
+		color:red;
+}
+/*fieldsets styles*/
+#penaltiesFieldset{
+	width:400px;
+	height:410px;
+
+	
+}
+
 
 
 

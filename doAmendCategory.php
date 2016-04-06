@@ -5,6 +5,7 @@
   Purpose: Amend a record in the Category table
 -->
 <?php
+  include 'header.php';
   require_once 'functions.php';
   $con = getConnection();
   $catId = $_POST['amendCatId'];
@@ -18,7 +19,6 @@
     die("An Error in the SQL Amend Category Query: " . mysqli_error($con));
   }
   mysqli_close($con);
-	include 'header.php';
 ?>
 <!-- form to show user what they amended -->
 <form class="form" action="amendCategory.php" method="get">
@@ -32,7 +32,7 @@
   <label>Ten Day Discount (%)</label>
   <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
   <div class="form-btn">
-    <input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
+    <input type="submit" class="btnGreen" value="Back">
   </div>
 </form>
 <!-- image -->

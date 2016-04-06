@@ -6,8 +6,8 @@ Purpose:  -->
 <?php	
 	include 'db.inc.php';
 	// query for looking id in person table 	
-	$sql="SELECT Company.CompanyID,CompanyName,Street,Town,County,CreditLimit,CurrentBalance,StartBlacklist,AmountOnStart 
-	FROM Company INNER JOIN Blacklist ON Company.CompanyID=Blacklist.CompanyID
+	$sql="SELECT Company.CompanyID,CompanyName,Street,Town,County,CreditLimit,CurrentBalance,StartBlacklist,AmountOnStart, ManagerFlag 
+	FROM (Company INNER JOIN Blacklist ON Company.CompanyID=Blacklist.CompanyID) INNER JOIN Employee ON Blacklist.UserName=Employee.UserName
 	WHERE Blacklist.DeleteFlag=0 AND Company.DeleteFlag=0";
 
 	if(!$result = mysqli_query($con, $sql)){
@@ -25,8 +25,9 @@ Purpose:  -->
 		$BalanceOnBlacklistedDate=$row ['AmountOnStart']; 
 		$currentBalance= $row ['CurrentBalance'];
 		$limit= $row ['CreditLimit'];
-		$dateBlacklisted = $row ['StartBlacklist'];		
-		$allDetails = "$companyID,$company,$street,$town,$county,$BalanceOnBlacklistedDate,$currentBalance,$limit,$dateBlacklisted";
+		$dateBlacklisted = $row ['StartBlacklist'];
+		$manager=$row['ManagerFlag'];		
+		$allDetails = "$companyID,$company,$street,$town,$county,$BalanceOnBlacklistedDate,$currentBalance,$limit,$dateBlacklisted,$manager";
 		echo "<option value= '$allDetails'>$company</option>";
 	}	
 	mysqli_close($con);	

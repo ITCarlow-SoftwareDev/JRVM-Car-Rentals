@@ -2,15 +2,11 @@
  Author         : Ronan Timmons
  Student No     : C00197150
  Date created   : 25/2/2016
- Last edited 	:
 
- Unit 1
+ Unit 4
  Purpose        : Enables the addition of new cars to the Car table.
  
- Query used in PLESK to confirm SQL 
-//UPDATE Car INNER JOIN Model ON Car.ModelID = Model.ModelID SET Car.ChassisNo ="000121457",
-//Car.Colour ="pink",Car.DateAdded ="2014-01-01", Model.Model="Fiesta",
-//Model.BodyStyle="HatchBack" WHERE Car.RegNo =000
+
 -->
 <?php
 

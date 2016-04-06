@@ -5,6 +5,7 @@
   Purpose: Add a new record to Category table
 -->
 <?php
+  include 'header.php';
   require_once 'functions.php';
   $con = getConnection();
   $catId = $_POST['addCatId'];
@@ -18,9 +19,8 @@
     die("An Error in the SQL Add Category Query: " . mysqli_error($con));
   }
   mysqli_close($con);
-	include 'header.php';
 ?>
-<!-- form to show user what they added -->
+<!-- form to show user what details they added to the database-->
 <form class="form" action="addCategory.php" method="get">
   <h2>Rental Category Added!</h2>
   <label>Category Id</label>
@@ -32,7 +32,7 @@
   <label>Ten day Discount (%)</label>
   <input type="number" value="<?php echo $tenDayDisc ?>" readonly>
   <div class="form-btn">
-    <input type="submit" class="btnGreen" id="btnSuccess" value="Return to Previous Screen">
+    <input type="submit" class="btnGreen" value="Back">
   </div>
 </form>
 <!-- image -->

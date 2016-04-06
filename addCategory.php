@@ -11,17 +11,19 @@
   <h2>Add a New Rental Category</h2>
   <label for="listAddCat">Current Category List</label>
   <select name="listAddCat" id="listAddCat" title="List of category names currently in use" autofocus>
-    <?php 
-      include 'listCatId.php'; // display the category id's in the select box
+    <?php // display all category id's in the list box (include categories flagged for deletion)
+      include 'doListCategoryB.php'; 
     ?>
   </select>
   <label for="addCatId">New Category Identification</label>
+  <!-- Pattern = one capital letter only -->
   <input type="text" name="addCatId" id="addCatId" placeholder="Capital letter A-Z only" pattern="[A-Z]{1}"
   title="Capital letter A-Z only" oninput='checkCatId()' autocomplete="off" required>
   <label for="addCostPerDay">New Cost per Day</label>
   <input type="number" name="addCostPerDay" id="addCostPerDay" title="Please enter cost per day for vehicle"
   placeholder="No currency symbol needed e.g. 24.99" min="0" step=".01" required>
   <label for="addFiveDayDisc">New Five Day Discount (%)</label>
+  <!-- Allow user to enter whole numbers between 0 and 100 inclusive -->
   <input type="number" id="addFiveDayDisc" name="addFiveDayDisc" title="Please enter the five day discount as a percentage"
   placeholder="Whole number between 0 and 100 e.g. 15" min="0" max="100" step="1" required>
   <label for="addTenDayDisc">New Ten Day Discount (%)</label>
@@ -37,7 +39,7 @@
   <img id="car" src="./images/car.png">
 </div>
 <script>
-  // checkCatId() checks if the category id entered is the same as a category id already in use
+  // checks if the category id entered is the same as a category id already in use
   function checkCatId() {
     var list = document.getElementById('listAddCat');
     var inputCategory = document.getElementById("addCatId").value
@@ -56,7 +58,7 @@
       }
     }
   } // end checkCatId
-  // confirmCheck() prompts user to confirm details before submiting
+  // prompts user to confirm details before submiting
   function confirmCheck() {
     var response = confirm("Are you sure you want to add this record?");
     if(response == true) {

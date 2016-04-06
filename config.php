@@ -7,7 +7,9 @@
  */
 
     //    Database configuration
-    define('MYSQL_HOSTNAME', 'localhost');
+//    define('MYSQL_HOSTNAME', 'localhost');
+    define('MYSQL_HOSTNAME', 'rentacar.candept.com');
     define('MYSQL_USERNAME', 'root');
-    define('MYSQL_PASSWORD', 'root');
+    define('MYSQL_PASSWORD', 'project');
     define('MYSQL_DBNAME', 'JRVM');
+?>
