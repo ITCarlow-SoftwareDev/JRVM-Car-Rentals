@@ -1,6 +1,6 @@
 <?php
   $hostname = "localhost";
-  $username = "USERNAME";
+  $username = "root";
   $password = "PASSWORD";
   $dbname = "JRVM";
   $con = mysqli_connect($hostname, $username, $password, $dbname); // Create conection
