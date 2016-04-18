@@ -5,7 +5,7 @@
  * Date: 30-03-2016
  * Purpose: Database info.
  * Note:
- *   Thanks a lot for someone give me a notice in database.
+ *   Thanks a lot for someone gave me a notice in database.
  */
     define('MYSQL_HOSTNAME', 'localhost');
     define('MYSQL_USERNAME', 'root');
