@@ -5,8 +5,8 @@
  * Date: 30-03-2016
  * Purpose: Database info.
  */
-    define('MYSQL_HOSTNAME', 'rentacar.candept.com');
-    define('MYSQL_USERNAME', 'root');
-    define('MYSQL_PASSWORD', 'project');
+    define('MYSQL_HOSTNAME', 'HOSTNAME');
+    define('MYSQL_USERNAME', 'USERNAME');
+    define('MYSQL_PASSWORD', 'PASSWORD');
     define('MYSQL_DBNAME', 'JRVM');
 ?>
