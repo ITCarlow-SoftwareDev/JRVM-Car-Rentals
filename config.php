@@ -7,8 +7,8 @@
  * Note:
  *   Thanks a lot for someone give me a notice in database.
  */
-    define('MYSQL_HOSTNAME', 'HOSTNAME');
-    define('MYSQL_USERNAME', 'USERNAME');
+    define('MYSQL_HOSTNAME', 'localhost');
+    define('MYSQL_USERNAME', 'root');
     define('MYSQL_PASSWORD', 'PASSWORD');
     define('MYSQL_DBNAME', 'JRVM');
 ?>
